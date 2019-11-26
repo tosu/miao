@@ -7,90 +7,96 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>css-block-layout</title>
   <style>
-      html {
-  box-sizing: border-box;
-}
+    html {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+    }
 
-header {
-  color: white;
-  background-color: black;
-  margin-top: -10px;
-}
+    header {
+      color: white;
+      background-color: black;
+      margin-left: 0;
+    }
 
-p.header{
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-}
+    p.header {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+    }
 
-p.main {
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.container {
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.content {
-  height: 34px;
-  width: 174px;
-  border: 3px solid rgb(83, 0, 63);
-  background-color: rgb(226, 176, 159);
-  margin-bottom: 15px;
-  text-align: center;
-  line-height: 34px;
-}
+    p.main {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.content:hover {
-  background-color: red;
-}
-.content:nth-child(n+5) {
-    margin-left: 210px;  
-}
+    .container {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.content:nth-child(n+9) {
-    margin-left: 420px; 
-}
+    .content {
+      height: 34px;
+      width: 174px;
+      border: 3px solid rgb(83, 0, 63);
+      background-color: rgb(226, 176, 159);
+      margin-bottom: 15px;
+      text-align: center;
+      line-height: 34px;
+    }
 
-.content:nth-child(5) {
-    margin-top: -220px;
-}
+    .content:hover {
+      background-color: red;
+    }
 
-.content:nth-child(9) {
-    margin-top: -220px;
-}
+    .content:nth-child(n+5) {
+      margin-left: 210px;
+    }
 
-div.link {
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto; 
-}
+    .content:nth-child(n+9) {
+      margin-left: 420px;
+    }
 
-p.link {
-  margin-bottom: 0;
-  border-bottom:1px dotted;
-  margin-top: 0;
-}
+    .content:nth-child(5) {
+      margin-top: -220px;
+    }
 
-p.link-bottom {
-  margin-bottom: 0;
-  margin-top: 0;
-}
+    .content:nth-child(9) {
+      margin-top: -220px;
+    }
 
-footer {
-  background-color: #047CFC;
-}
+    div.link {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-p.footer {
-  text-align: center;
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+    p.link {
+      margin-bottom: 0;
+      border-bottom: 1px dotted;
+      margin-top: 0;
+    }
+
+    p.link-bottom {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: #047CFC;
+    }
+
+    p.footer {
+      text-align: center;
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 
