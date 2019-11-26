@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css-block-layout</title>
+  <style>
+      html {
+  box-sizing: border-box;
+}
+
+
+header {
+  color: white;
+  background-color: black;
+  margin-top: -10px;
+}
+
+p.header{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+p.main {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content {
+  height: 34px;
+  width: 174px;
+  border: 3px solid rgb(83, 0, 63);
+  background-color: rgb(226, 176, 159);
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 34px;
+}
+
+.content:hover {
+  background-color: red;
+}
+.content:nth-child(n+5) {
+    margin-left: 210px;  
+}
+
+.content:nth-child(n+9) {
+    margin-left: 420px; 
+}
+
+.content:nth-child(5) {
+    margin-top: -220px;
+}
+
+.content:nth-child(9) {
+    margin-top: -220px;
+}
+
+div.link {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+p.link {
+  margin-bottom: 0;
+  border-bottom:1px dotted;
+  margin-top: 0;
+}
+
+p.link-bottom {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+footer {
+  background-color: #047CFC;
+}
+
+p.footer {
+  text-align: center;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <p class="header">hello world 请调整浏览器窗口大小查看效果</p>
+  </header>
+  <p class="main">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+  <div class="container">
+    <div class="content">宽180高40(包含边框)
+    </div>
+    <div class="content">水平间隙30px
+    </div>
+    <div class="content">垂直间隙15px
+    </div>
+    <div class="content">边框宽度3px
+    </div>
+    <div class="content">产品
+    </div>
+    <div class="content">产品
+    </div>
+    <div class="content">产品
+    </div>
+    <div class="content">产品
+    </div>
+    <div class="content">产品
+    </div>
+    <div class="content">产品
+    </div>
+    <div class="content">产品
+    </div>
+    <div class="content">产品
+    </div>
+
+    <div class="link">
+      <p class="link">link</p>
+      <p class="link">link</p>
+      <p class="link">link</p>
+      <p class="link">link</p>
+      <p class="link-bottom">link</p>
+    </div>
+  </div>
+
+  <footer>
+    <p class="footer">
+      ©版权所有</br>
+      本页所有布局均使用块元素
+    </p>
+  </footer>
+</body>
+
+</html>
