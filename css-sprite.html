@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Sprites</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+      }
+      .icons {
+        width: 500px;
+        height: 200px;
+        border: 3px solid black;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .title {
+        width: 180px;
+        height: 75px;
+        border: 1px solid black;
+        margin-top: 10px;
+        background: url(css-sprite.png) 0 100% no-repeat;
+      }
+
+      .star {
+        width: 130px;
+        height: 30px;
+        border: 1px solid black;
+        margin-top: 10px;
+        background: url(css-sprite.png) top -520px right -5px no-repeat;
+        transition: background 0.2s;
+      }
+      .star:hover {
+        background: url(css-sprite.png) top -550px right -5px no-repeat;
+        transition: background 0.2s;
+      }
+
+      .person-info {
+        width: 30px;
+        height: 35px;
+        border: 1px solid black;
+        margin-top: 10px;
+        background: url(css-sprite.png) top -655px left 0px no-repeat;
+        transition: background 0.1s;
+        position: relative;
+      }
+      .person-info::after {
+        content: "";
+        background: url(css-sprite.png) top -655px left -30px no-repeat;
+        opacity: 0;
+        transition: opacity 0.5s;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      .person-info:hover::after {
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Sprites</h1>
+    <div class="icons">
+      <div class="title"></div>
+      <div class="star"></div>
+      <div class="person-info"></div>
+    </div>
+  </body>
+</html>
