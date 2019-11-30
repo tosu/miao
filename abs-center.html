@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Absolute Centering</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: #ffcc99;
+      }
+
+      h1 {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        color: #990033;
+        text-align: center;
+      }
+
+      main.inline-container {
+        background: #ffff99;
+        margin: 20px 0;
+        padding: 80px 50px;
+        text-align: center;
+      }
+
+      a.inline-center {
+        background: #ffcccc;
+        color: #990033;
+        padding: 30px;
+      }
+
+      div.abs-container {
+        background: #ffff99;
+        margin: 20px 0;
+        padding: 50px;
+        text-align: center;
+      }
+      div.margin-center {
+        background: #ffcccc;
+        color: #990033;
+        padding: 30px;
+        width: 300px;
+        margin: auto;
+      }
+
+      div.positioned-container {
+        position: relative;
+
+        height: 200px;
+        background: #ffff99;
+        margin: 20px 0;
+        padding: 50px;
+        text-align: center;
+      }
+
+      div.minus-margin {
+        background: #ffcccc;
+        color: #990033;
+        padding: 30px;
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Inline</h1>
+    <main class="inline-container">
+      <a class="inline-center">Inline Center in one line</a>
+    </main>
+
+    <h1>Absolute Center</h1>
+
+    <div class="abs-container">
+      <div class="margin-center">Margin Center</div>
+    </div>
+
+    <div class="positioned-container">
+      <div class="minus-margin">
+        Minus Margin <br />
+        With Positioned Absolute
+      </div>
+    </div>
+  </body>
+</html>
