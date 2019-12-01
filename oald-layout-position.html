@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OALD</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-size: 0;
+      }
+      div {
+        height: 100%;
+        width: 100px;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .sidebar {
+        width: 25%;
+        background-color: #ffcc99;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .middle {
+        width: 35%;
+        position: absolute;
+        top: 0;
+        left: 25%;
+      }
+
+      .content-top {
+        width: 100%;
+        height: 35%;
+        background-color: #ffff99;
+        position: absolute;
+        color: black;
+      }
+
+      p {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 3rem;
+      }
+      .content-bottom {
+        width: 100%;
+        height: 65%;
+        background-color: #ffff00;
+        position: absolute;
+        top: 35%;
+      }
+      .right {
+        width: 20%;
+        height: 100%;
+      }
+      .rightbar1 {
+        background-color: #ccff66;
+        position: absolute;
+        top: 0;
+        left: 60%;
+      }
+      .rightbar2 {
+        background-color: #009966;
+        position: absolute;
+        top: 0;
+        left: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar"></div>
+      <div class="middle">
+        <div class="content-top"><p>User Postion</p></div>
+        <div class="content-bottom"></div>
+      </div>
+      <div class="right rightbar1"></div>
+      <div class="right rightbar2"></div>
+    </div>
+  </body>
+</html>
