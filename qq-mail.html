@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+      a {
+        display: inline-block;
+        font-size: 0;
+        text-decoration: none;
+      }
+      main {
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+      }
+      a.banner {
+        width: 100%;
+        height: 66px;
+        margin: 0;
+        background-color: #ffcc99;
+        font-size: 1rem;
+        padding: 20px;
+      }
+      a.sidebar {
+        width: 10%;
+        height: calc(100% - 66px);
+        margin: 0;
+        background-color: #99cc99;
+        vertical-align: top;
+      }
+      a.content {
+        width: 90%;
+        height: calc(100% - 66px);
+        margin: 0;
+        text-align: left;
+        background-color: #ffff99;
+      }
+    </style>
+    <title>QQ</title>
+  </head>
+  <body>
+    <main>
+      <a href="#" class="banner"
+        >Use Inline Element Implementing the QQ-Mail Layout</a
+      >
+      <a href="#" class="sidebar"></a>
+      <a href="#" class="content"></a>
+    </main>
+  </body>
+</html>
