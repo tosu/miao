@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cascading Menu</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Microsoft YaHei";
+      }
+
+      div {
+        background-color: #5c6bc0;
+        margin-top: 0;
+      }
+      nav {
+        width: 800px;
+        margin-left: 0;
+        font-size: 0;
+      }
+      nav > ul {
+        padding: 0;
+      }
+      nav > ul > li {
+        padding: 0.5rem 2rem;
+        list-style: none;
+        height: 2.5rem;
+        display: inline-block;
+        position: relative;
+        font-size: 1rem;
+        text-align: center;
+        color: #e8eaf6;
+        border-left: 1px solid #9fa8da;
+        cursor: pointer;
+      }
+      nav > ul > li:last-child {
+        border-right: 1px solid #9fa8da;
+      }
+      ul ul {
+        position: absolute;
+        background-color: #9fa8da;
+        height: initial;
+        list-style: none;
+        padding: 0;
+        line-height: 2.5rem;
+        top: 100%;
+        left: -999rem;
+      }
+      ul ul li {
+        padding: 0 2rem;
+        width: 10rem;
+      }
+      li:hover > ul {
+        left: 0;
+      }
+      li:hover {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            File
+            <ul>
+              <li>11</li>
+              <li>22</li>
+              <li>33</li>
+              <li>44</li>
+              <li>55</li>
+            </ul>
+          </li>
+          <li>
+            Edit
+            <ul>
+              <li>11</li>
+              <li>22</li>
+              <li>33</li>
+              <li>44</li>
+              <li>55</li>
+            </ul>
+          </li>
+          <li>
+            Selection
+            <ul>
+              <li>11</li>
+              <li>22</li>
+              <li>33</li>
+              <li>44</li>
+              <li>55</li>
+            </ul>
+          </li>
+          <li>
+            View
+            <ul>
+              <li>11</li>
+              <li>22</li>
+              <li>33</li>
+              <li>44</li>
+              <li>55</li>
+            </ul>
+          </li>
+          <li>
+            Go
+            <ul>
+              <li>11</li>
+              <li>22</li>
+              <li>33</li>
+              <li>44</li>
+              <li>55</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
