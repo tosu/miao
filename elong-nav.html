@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Elong Navigator</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Microsoft YaHei";
+      }
+      div.nav {
+        background-color: #5c6bc0;
+        margin-top: 4rem;
+      }
+      nav {
+        width: 800px;
+        margin: auto;
+        font-size: 0;
+      }
+
+      li {
+        padding: 0.2rem;
+        list-style: none;
+        height: 2.5rem;
+        display: inline-block;
+        position: relative;
+        font-size: 1rem;
+        line-height: 2.1rem;
+        color: #e8eaf6;
+        border-left: 1px solid #9fa8da;
+        cursor: pointer;
+      }
+      li:nth-last-child(1) {
+        border-right: 1px solid #9fa8da;
+      }
+
+      li[data-promote]::before {
+        content: attr(data-promote);
+        position: absolute;
+        z-index: 2;
+        font-size: 10px;
+        height: 18px;
+        line-height: 18px;
+        background-color: #e65100;
+        bottom: 30px;
+        right: -35px;
+      }
+      li[data-promote]::after {
+        content: "";
+        position: absolute;
+        bottom: 26px;
+        right: -2px;
+        z-index: 2;
+        border-top: 2.5px solid #e65100;
+        border-left: 2.5px solid #e65100;
+        border-right: 2.5px solid transparent;
+        border-bottom: 2.5px solid transparent;
+      }
+      li:hover {
+        background-color: #1a237e;
+      }
+      li:active {
+        background-color: #1a237e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <nav>
+        <ul>
+          <li>首页</li>
+          <li>国内酒店</li>
+          <li data-promote="海外酒店">低价促</li>
+          <li data-promote="全新升级">国内·国际机票</li>
+          <li>火车票</li>
+          <li>汽车票</li>
+          <li>商旅</li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
