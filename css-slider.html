@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Slider</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "SF Pro SC", "SF Pro Display", "PingFang SC",
+          "Lucida Grande", "Helvetica Neue", Helvetica, Arial, Verdana,
+          sans-serif, "Hiragino Sans GB";
+        line-height: 150%;
+      }
+      div.slider-1 {
+        display: block;
+        position: relative;
+        width: 800px;
+        height: 600px;
+        padding: 10px;
+        margin: 30px;
+        border: 1px solid black;
+        background-color: #f5f5f5;
+      }
+
+      input[type="radio"] {
+        display: none;
+        margin-left: 20px;
+      }
+      input[type="radio"] + label {
+        display: inline-block;
+        position: relative;
+        color: black;
+        cursor: pointer;
+        -webkit-user-select: none;
+        outline: none;
+        font-size: 20px;
+      }
+      input[type="radio"] + label::before {
+        content: "";
+        display: inline-block;
+        position: relative;
+        top: 60px;
+        right: -458px;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        border: 3px solid #0288d1;
+        opacity: 0.8;
+        transition: all 200ms, box-shadow 500ms;
+      }
+      input[type="radio"]:active + label::before {
+        box-shadow: 0px 0px 0px 18px rgb(239, 108, 0, 0.2),
+          inset 0px 0px 0px 18px rgb(239, 108, 0, 0.2);
+        transition: box-shadow 200ms;
+      }
+      input[type="radio"]:checked + label::before {
+        border-color: rgb(239, 108, 0, 1);
+        background-color: rgb(239, 108, 0, 1);
+        box-shadow: inset 0px 0px 0px 5px white;
+        transition: all 200ms, background-color ease-out 800ms;
+      }
+      ul.slider-body div.content-box {
+        display: block;
+        position: relative;
+        right: -500px;
+        top: 10px;
+        width: 180px;
+        height: 180px;
+        opacity: 0;
+      }
+      ul.slider-body {
+        list-style: none;
+        position: relative;
+        width: 85%;
+        height: 45%;
+        margin: 50px;
+        padding: 0;
+        border-bottom: 2px solid #454d55;
+        overflow: hidden;
+      }
+      ul > li {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      ul.slider-body li.turn-1 p.image {
+        display: block;
+        position: absolute;
+        width: 280px;
+        height: 120px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 1px #5f666d;
+      }
+      ul.slider-body li.turn-1 > p {
+        left: 400px;
+        top: 600px;
+        transform: rotate(-45deg);
+        opacity: 0.5;
+      }
+      ul.slider-body li.turn-1 > p:nth-child(1) {
+        background-image: url(slider-img/01.jpg);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+      }
+      ul.slider-body li.turn-1 > p:nth-child(2) {
+        background-image: url(slider-img/02.jpg);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+        transition-delay: 260ms;
+      }
+      ul.slider-body li.turn-1 > p:nth-child(3) {
+        background-image: url(slider-img/03.png);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+        transition-delay: 380ms;
+      }
+      input#radio-1:checked ~ ul.slider-body li.turn-1 > p:nth-child(1) {
+        left: 50px;
+        top: 35px;
+        transform: rotate(18deg);
+        opacity: 1;
+        transition: opacity 800ms ease-in;
+      }
+      input#radio-1:checked ~ ul.slider-body li.turn-1 > p:nth-child(2) {
+        left: 50px;
+        top: 60px;
+        transform: rotate(5deg);
+        opacity: 1;
+        transition: opacity 1200ms ease-in;
+      }
+      input#radio-1:checked ~ ul.slider-body li.turn-1 > p:nth-child(3) {
+        left: 50px;
+        top: 70px;
+        transform: rotate(-10deg);
+        opacity: 1;
+        transition: opacity 1400ms ease-in;
+      }
+      input#radio-1:checked ~ ul.slider-body div.content-box.box-1 {
+        right: -400px;
+        opacity: 1;
+        transition: opacity 50ms ease-out, right 300ms ease;
+      }
+
+      ul.slider-body li.turn-2 p.image {
+        display: block;
+        position: absolute;
+        width: 280px;
+        height: 120px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 1px #5f666d;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      ul.slider-body li.turn-2 > p {
+        left: 800px;
+        top: 600px;
+        transform: rotate(-45deg);
+        opacity: 0;
+      }
+      ul.slider-body li.turn-2 > p:nth-child(1) {
+        background-image: url(slider-img/04.jpg);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+      }
+      ul.slider-body li.turn-2 > p:nth-child(2) {
+        background-image: url(slider-img/05.jpg);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+        transition-delay: 260ms;
+      }
+      ul.slider-body li.turn-2 > p:nth-child(3) {
+        background-image: url(slider-img/06.png);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+        transition-delay: 380ms;
+      }
+      input#radio-2:checked ~ ul.slider-body li.turn-2 > p:nth-child(1) {
+        left: 50px;
+        top: 35px;
+        transform: rotate(18deg);
+        opacity: 1;
+        transition: opacity 800ms ease-in;
+      }
+      input#radio-2:checked ~ ul.slider-body li.turn-2 > p:nth-child(2) {
+        left: 50px;
+        top: 60px;
+        transform: rotate(5deg);
+        opacity: 1;
+        transition: opacity 1200ms ease-in;
+      }
+      input#radio-2:checked ~ ul.slider-body li.turn-2 > p:nth-child(3) {
+        left: 50px;
+        top: 70px;
+        transform: rotate(-10deg);
+        opacity: 1;
+        transition: opacity 1400ms ease-in;
+      }
+      input#radio-2:checked ~ ul.slider-body div.content-box.box-2 {
+        right: -400px;
+        opacity: 1;
+        transition: opacity 50ms ease-out, right 300ms ease;
+      }
+
+      ul.slider-body li.turn-3 p.image {
+        display: block;
+        position: absolute;
+        width: 280px;
+        height: 120px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 1px #5f666d;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      ul.slider-body li.turn-3 > p {
+        left: 800px;
+        top: 600px;
+        transform: rotate(-45deg);
+        opacity: 0;
+      }
+      ul.slider-body li.turn-3 > p:nth-child(1) {
+        background-image: url(slider-img/07.png);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+      }
+      ul.slider-body li.turn-3 > p:nth-child(2) {
+        background-image: url(slider-img/08.jpg);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+        transition-delay: 260ms;
+      }
+      ul.slider-body li.turn-3 > p:nth-child(3) {
+        background-image: url(slider-img/09.png);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+        transition-delay: 380ms;
+      }
+      input#radio-3:checked ~ ul.slider-body li.turn-3 > p:nth-child(1) {
+        left: 50px;
+        top: 35px;
+        transform: rotate(18deg);
+        opacity: 1;
+        transition: opacity 800ms ease-in;
+      }
+      input#radio-3:checked ~ ul.slider-body li.turn-3 > p:nth-child(2) {
+        left: 50px;
+        top: 60px;
+        transform: rotate(5deg);
+        opacity: 1;
+        transition: opacity 1200ms ease-in;
+      }
+      input#radio-3:checked ~ ul.slider-body li.turn-3 > p:nth-child(3) {
+        left: 50px;
+        top: 70px;
+        transform: rotate(-10deg);
+        opacity: 1;
+        transition: opacity 1400ms ease-in;
+      }
+      input#radio-3:checked ~ ul.slider-body div.content-box.box-3 {
+        right: -400px;
+        opacity: 1;
+        transition: opacity 50ms ease-out, right 300ms ease;
+      }
+
+      ul.slider-body li.turn-4 p.image {
+        display: block;
+        position: absolute;
+        width: 280px;
+        height: 120px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 1px #5f666d;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      ul.slider-body li.turn-4 > p {
+        left: 800px;
+        top: 600px;
+        transform: rotate(-45deg);
+        opacity: 0;
+      }
+      ul.slider-body li.turn-4 > p:nth-child(1) {
+        background-image: url(slider-img/10.png);
+        background-color: #fff;
+
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+      }
+      ul.slider-body li.turn-4 > p:nth-child(2) {
+        background-image: url(slider-img/11.png);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+        transition-delay: 260ms;
+      }
+      ul.slider-body li.turn-4 > p:nth-child(3) {
+        background-image: url(slider-img/12.png);
+        background-color: #fff;
+        transition: transform 500ms, left 500ms, top 500ms,
+          opacity 600ms step-end;
+        transition-delay: 380ms;
+      }
+      input#radio-4:checked ~ ul.slider-body li.turn-4 > p:nth-child(1) {
+        left: 50px;
+        top: 35px;
+        transform: rotate(18deg);
+        opacity: 1;
+        transition: opacity 800ms ease-in;
+      }
+      input#radio-4:checked ~ ul.slider-body li.turn-4 > p:nth-child(2) {
+        left: 50px;
+        top: 60px;
+        transform: rotate(5deg);
+        opacity: 1;
+        transition: opacity 1200ms ease-in;
+      }
+      input#radio-4:checked ~ ul.slider-body li.turn-4 > p:nth-child(3) {
+        left: 50px;
+        top: 70px;
+        transform: rotate(-10deg);
+        opacity: 1;
+        transition: opacity 1400ms ease-in;
+      }
+      input#radio-4:checked ~ ul.slider-body div.content-box.box-4 {
+        right: -400px;
+        opacity: 1;
+        transition: opacity 50ms ease-out, right 300ms ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-1">
+      <input type="radio" name="slider" id="radio-1" checked />
+      <label for="radio-1"></label>
+      <input type="radio" name="slider" id="radio-2" />
+      <label for="radio-2"></label>
+      <input type="radio" name="slider" id="radio-3" />
+      <label for="radio-3"></label>
+      <input type="radio" name="slider" id="radio-4" />
+      <label for="radio-4"></label>
+      <ul class="slider-body">
+        <li class="turn-1">
+          <p class="image img-01"></p>
+          <p class="image img-02"></p>
+          <p class="image img-03"></p>
+          <div class="content-box box-1">
+            <h3 class="topic">Lorem, ipsum dolor.</h3>
+            <p class="class">Lorem ipsum dolor sit amet.</p>
+            <p class="class">Tenetur consequuntur inventore suscipit odit!</p>
+            <p class="class">Sequi omnis tenetur velit vero.</p>
+          </div>
+        </li>
+        <li class="turn-2">
+          <p class="image img-01"></p>
+          <p class="image img-02"></p>
+          <p class="image img-03"></p>
+          <div class="content-box box-2">
+            <h3 class="topic">Lorem, ipsum dolor.</h3>
+            <p class="class">Lorem ipsum dolor sit amet.</p>
+            <p class="class">Tenetur consequuntur inventore suscipit odit!</p>
+            <p class="class">Sequi omnis tenetur velit vero.</p>
+          </div>
+        </li>
+        <li class="turn-3">
+          <p class="image img-01"></p>
+          <p class="image img-02"></p>
+          <p class="image img-03"></p>
+          <div class="content-box box-3">
+            <h3 class="topic">Lorem, ipsum dolor.</h3>
+            <p class="class">Lorem ipsum dolor sit amet.</p>
+            <p class="class">Tenetur consequuntur inventore suscipit odit!</p>
+            <p class="class">Sequi omnis tenetur velit vero.</p>
+          </div>
+        </li>
+        <li class="turn-4">
+          <p class="image img-01"></p>
+          <p class="image img-02"></p>
+          <p class="image img-03"></p>
+          <div class="content-box box-4">
+            <h3 class="topic">Lorem, ipsum dolor.</h3>
+            <p class="class">Lorem ipsum dolor sit amet.</p>
+            <p class="class">Tenetur consequuntur inventore suscipit odit!</p>
+            <p class="class">Sequi omnis tenetur velit vero.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
