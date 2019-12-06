@@ -135,13 +135,16 @@
         content: "";
         float: right;
         box-sizing: border-box;
-        margin: 10px;
-        margin-top: 430px;
+        margin: 5px;
+        margin-top: 415px;
         left: 0;
         width: 10px;
         height: 10px;
         border-radius: 5px;
         background-color: rgba(255, 255, 255, 0.7);
+      }
+      input[name="slider"]:nth-of-type(1) + label::before {
+        margin-right: 45px;
       }
       input[name="slider"] + label:hover::before,
       input[name="slider"]:checked + label::before {
