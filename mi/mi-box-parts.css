@@ -1,0 +1,144 @@
+div.main-item-box-vol.parts > div.header-button.button-01 {
+  right: 156px;
+}
+div.main-item-box-vol.parts > div.header-button.button-02 {
+  right: 78px;
+}
+div.main-item-box-vol.parts > div.header-button.hovered {
+  color: #ff6709;
+}
+
+div.main-item-box-vol.parts > div.button-01.hovered::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 0;
+  border: 1px solid #ff6709;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+}
+div.main-item-box-vol.parts > div.button-02.hovered::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 0;
+  border: 1px solid #ff6709;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+}
+div.main-item-box-vol.parts > div.button-03.hovered::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 0;
+  border: 1px solid #ff6709;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+}
+
+.main-item-box-vol.parts div.header-button.button-01.hovered {
+  animation: 1ms forwards paused in;
+}
+.main-item-box-vol.parts div.header-button.button-02.hovered {
+  animation: 1ms forwards paused out;
+}
+.main-item-box-vol.parts div.header-button.button-03.hovered {
+  animation: 1ms forwards paused out;
+}
+.main-item-box-vol.parts .button-01.unhover:hover ~ .button-01.hovered {
+  animation-name: out;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.parts .button-01.unhover:hover ~ .button-02.hovered {
+  animation-name: in;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.parts .button-01.unhover:hover ~ .button-03.hovered {
+  animation-name: in;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.parts .button-02.unhover:hover ~ .button-02.hovered {
+  animation-name: out;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.parts .button-02.unhover:hover ~ .button-01.hovered {
+  animation-name: in;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.parts .button-02.unhover:hover ~ .button-03.hovered {
+  animation-name: in;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.parts .button-03.unhover:hover ~ .button-01.hovered {
+  animation-name: in;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.parts .button-03.unhover:hover ~ .button-02.hovered {
+  animation-name: in;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.parts .button-03.unhover:hover ~ .button-03.hovered {
+  animation-name: out;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+.main-item-box-vol.parts > .box-02,
+.main-item-box-vol.parts > .box-03 {
+  background-color: #f5f5f5;
+  visibility: hidden;
+  transition-delay: 3600s;
+}
+.main-item-box-vol.parts .button-01.unhover:hover ~ div.box-01 {
+  visibility: visible;
+  transition-delay: 0s;
+}
+.main-item-box-vol.parts .button-01.unhover:hover ~ div.box-02 {
+  visibility: hidden;
+  display: none;
+  transition-delay: 0s;
+}
+.main-item-box-vol.parts .button-01.unhover:hover ~ div.box-03 {
+  visibility: hidden;
+  display: none;
+  transition-delay: 0s;
+}
+.main-item-box-vol.parts .button-02.unhover:hover ~ div.box-02 {
+  visibility: visible;
+  transition-delay: 0s;
+}
+.main-item-box-vol.parts .button-02.unhover:hover ~ div.box-01 {
+  visibility: hidden;
+  display: none;
+  transition-delay: 0s;
+}
+.main-item-box-vol.parts .button-02.unhover:hover ~ div.box-03 {
+  visibility: hidden;
+  display: none;
+  transition-delay: 0s;
+}
+.main-item-box-vol.parts .button-03.unhover:hover ~ div.box-03 {
+  visibility: visible;
+  transition-delay: 0s;
+}
+.main-item-box-vol.parts .button-03.unhover:hover ~ div.box-01 {
+  visibility: hidden;
+  display: none;
+  transition-delay: 0s;
+}
+.main-item-box-vol.parts .button-03.unhover:hover ~ div.box-02 {
+  visibility: hidden;
+  display: none;
+  transition-delay: 0s;
+}

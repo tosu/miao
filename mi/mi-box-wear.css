@@ -1,0 +1,75 @@
+div.main-item-box-vol.wear > div.header-button.button-01 {
+  right: 94px;
+}
+
+div.main-item-box-vol.wear > div.header-button.hovered {
+  color: #ff6709;
+}
+
+div.main-item-box-vol.wear > div.button-01.hovered::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 0;
+  border: 1px solid #ff6709;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+}
+div.main-item-box-vol.wear > div.button-02.hovered::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 0;
+  border: 1px solid #ff6709;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+}
+
+.main-item-box-vol.wear div.header-button.button-01.hovered {
+  animation: 1ms forwards paused in;
+}
+.main-item-box-vol.wear div.header-button.button-02.hovered {
+  animation: 1ms forwards paused out;
+}
+
+.main-item-box-vol.wear .button-01.unhover:hover ~ .button-01.hovered {
+  animation-name: out;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.wear .button-01.unhover:hover ~ .button-02.hovered {
+  animation-name: in;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.wear .button-02.unhover:hover ~ .button-02.hovered {
+  animation-name: out;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+.main-item-box-vol.wear .button-02.unhover:hover ~ .button-01.hovered {
+  animation-name: in;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+.main-item-box-vol.wear > .box-02 {
+  background-color: #f5f5f5;
+  visibility: hidden;
+  transition-delay: 3600s;
+}
+.main-item-box-vol.wear .button-01.unhover:hover ~ div.box-01 {
+  visibility: visible;
+  transition-delay: 0s;
+}
+.main-item-box-vol.wear .button-01.unhover:hover ~ div.box-02 {
+  visibility: hidden;
+  display: none;
+  transition-delay: 0s;
+}
+.main-item-box-vol.wear .button-02.unhover:hover ~ div.box-02 {
+  visibility: visible;
+  transition-delay: 0s;
+}

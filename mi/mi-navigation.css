@@ -1,0 +1,306 @@
+/* Navigation bar positions */
+div.navigation-container {
+  display: block;
+  width: 1226px;
+  height: 100px;
+  position: relative;
+  margin: auto;
+  scroll-behavior: smooth;
+}
+/* Navigation icon style */
+.navigation-container > span.icon {
+  width: 56px;
+  height: 56px;
+  background-image: url(icons/logo-sprite.png);
+  background-position: top 0 left -56px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 23px;
+  cursor: pointer;
+  transition: 200ms ease;
+}
+.navigation-container > span.icon:hover {
+  background-position: top 0 left 0;
+  transition: 200ms ease;
+}
+/* Navigation layout */
+.navigation-container > div.navigation-list-container {
+  display: block;
+  width: 632px;
+  height: 78px;
+  position: absolute;
+  bottom: 0;
+  left: 297px;
+}
+.navigation-container > div.navigation-search-container {
+  display: block;
+  width: 297px;
+  height: 100px;
+  position: absolute;
+  padding: 0;
+  right: 0;
+  top: 0;
+}
+.navigation-container > div.navigation-search-container {
+  padding-top: 23px;
+}
+/* Navigation items  position*/
+li.navigation-item > span.navigation-items {
+  display: inline-block;
+  text-align: center;
+  height: 78px;
+  float: left;
+  bottom: 0;
+  font-size: 16px;
+  line-height: 55px;
+  margin-top: auto;
+  margin-left: 20px;
+  cursor: pointer;
+}
+li.navigation-item > span.navigation-items:hover {
+  color: #f57c00;
+}
+li.navigation-item:nth-of-type(1) > span.navigation-items {
+  margin-left: -63px;
+}
+/* Navigation list item position and style */
+div.navigation-content {
+  width: 100vw;
+  position: absolute;
+  margin-left: -50vw;
+  height: 0px;
+  top: 77px;
+  left: 50%;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px -5px rgba(189, 189, 189, 0.5);
+  overflow: hidden;
+  transition: 300ms ease-in;
+  z-index: 9;
+}
+
+li.navigation-item > span.navigation-items:hover + div.navigation-content {
+  height: 229px;
+  border-top: 1px solid #e0e0e0;
+  transition: 300ms ease-in, border 0s;
+}
+div.navigation-content > ul.navigation-content-list {
+  display: block;
+  width: 1226px;
+  margin: auto;
+  height: 100%;
+  font-size: 0;
+  padding-left: 1px;
+}
+ul.navigation-content-list > li.navigation-content-item {
+  display: inline-block;
+  width: 204px;
+  height: 100%;
+  padding-top: 35px;
+  background-color: #fff;
+}
+/* Content list cutting line */
+ul.navigation-content-list
+  > li.navigation-content-item:nth-of-type(n + 2)::before {
+  content: "";
+  display: inline;
+  width: 0;
+  height: 100px;
+  background-color: #fff;
+  border-left: 1px solid #e0e0e0;
+  position: absolute;
+  margin-left: -1px;
+  margin-top: 5px;
+}
+/* Content list image */
+li.navigation-content-item > span.cotent-items-img {
+  display: block;
+  width: 160px;
+  height: 110px;
+  margin: auto;
+  cursor: pointer;
+}
+ul.navigation-list > li.navigation-item:nth-of-type(1) span.cotent-items-img {
+  background-image: url(navigation/xiaomi9.png);
+  background-size: contain;
+  background-position: center;
+}
+ul.navigation-list > li.navigation-item:nth-of-type(2) span.cotent-items-img {
+  background-image: url(navigation/redmi.png);
+  background-size: contain;
+  background-position: center;
+}
+ul.navigation-list > li.navigation-item:nth-of-type(3) span.cotent-items-img {
+  background-image: url(navigation/bihuadianshi.jpg);
+  background-size: contain;
+  background-position: center;
+}
+ul.navigation-list > li.navigation-item:nth-of-type(4) span.cotent-items-img {
+  background-image: url(navigation/xiaomipro.png);
+  background-size: contain;
+  background-position: center;
+}
+ul.navigation-list > li.navigation-item:nth-of-type(5) span.cotent-items-img {
+  background-image: url(navigation/xiaomikongtiao.png);
+  background-size: contain;
+  background-position: center;
+}
+ul.navigation-list > li.navigation-item:nth-of-type(6) span.cotent-items-img {
+  background-image: url(navigation/luyouqi4a.jpg);
+  background-size: contain;
+  background-position: center;
+}
+ul.navigation-list > li.navigation-item:nth-of-type(7) span.cotent-items-img {
+  background-image: url(navigation/xiaoaiyinxiang.jpg);
+  background-size: contain;
+  background-position: center;
+}
+/* Content list itemts title */
+li.navigation-content-item > span.cotent-items {
+  display: block;
+  color: black;
+  font-size: 11px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  width: 160px;
+  cursor: pointer;
+}
+li.navigation-content-item > span.cotent-items-price {
+  display: block;
+  color: #f57c00;
+  font-size: 11px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5px;
+  width: 160px;
+  cursor: text;
+}
+/* Navigation search style */
+div.navigation-search-container {
+  font-size: 0;
+}
+div.navigation-search-container > input[name="search-text"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 245px;
+  height: 50px;
+  border: 0;
+  padding: 0 10px 0 10px;
+  font-size: 14px;
+  font-weight: normal;
+  border: 1px solid #e0e0e0;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: 200ms ease;
+}
+div.navigation-search-container > input[name="search-text"]:focus {
+  border-color: #f57c00;
+}
+div.navigation-search-container > input[name="search-text"]:hover {
+  border: 1px solid #b0b0b0;
+  transition: 200ms ease;
+}
+div.navigation-search-container
+  > input[name="search-text"]:hover
+  ~ .search-button {
+  border: 1px solid #b0b0b0;
+  border-left: none;
+  transition: 200ms ease;
+}
+/* Navigation search button style */
+div.navigation-search-container > .search-button {
+  display: inline-block;
+  width: 52px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  bottom: 27px;
+  border: 1px solid #e0e0e0;
+  border-left: none;
+  color: #616161;
+  transition: 200ms ease;
+  cursor: pointer;
+}
+div.navigation-search-container > .search-button > .icono-search {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+div.navigation-search-container > .search-button:hover {
+  border: none;
+  background-color: #f57c00;
+  color: #fff;
+  transition: 200ms ease;
+}
+div.navigation-search-container > .search-button:hover ~ input {
+  border: 1px solid #b0b0b0;
+  border-right: 1px solid #f57c00;
+  transition: 200ms ease;
+}
+/* Placeholder style */
+span.search-placeholder-1,
+span.search-placeholder-2 {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #eee;
+  color: #757575;
+  transition: all 200ms;
+  position: absolute;
+  padding: 2px 5px 2px 5px;
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 400ms ease;
+}
+span.search-placeholder-1 {
+  top: 38px;
+  right: 155px;
+}
+span.search-placeholder-2 {
+  top: 38px;
+  right: 65px;
+}
+span.search-placeholder-1:hover,
+span.search-placeholder-2:hover {
+  background-color: #f57c00;
+  color: #fff;
+  transition: 400ms ease;
+}
+div.navigation-search-container > input[name="search-text"]:focus ~ span {
+  visibility: hidden;
+  opacity: 0;
+  transition: 400ms ease;
+}
+/* Navigation search history */
+div.search-history {
+  display: block;
+  width: 245px;
+  border: 1px solid #f57c00;
+  position: absolute;
+  background-color: #fff;
+  cursor: pointer;
+  display: none;
+  z-index: 5;
+}
+div.search-history > ul.search-history-list {
+  width: 100%;
+}
+div.search-history > ul.search-history-list li {
+  width: 100%;
+  padding: 5px 15px 5px 15px;
+}
+div.search-history > ul.search-history-list li span {
+  font-size: 14px;
+}
+div.search-history > ul.search-history-list li:hover {
+  background-color: #fafafa;
+}
+div.navigation-search-container
+  > input[name="search-text"]:focus
+  ~ div.search-history {
+  display: block;
+}

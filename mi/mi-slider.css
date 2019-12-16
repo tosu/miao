@@ -1,0 +1,247 @@
+/* Mi-like Slider Style */
+div.slider-with-sidebar {
+  position: relative;
+  width: 1226px;
+  height: 460px;
+  padding: 0;
+  margin: auto;
+  scroll-behavior: smooth;
+}
+/* Sidebar style config */
+ul.slider-side-list {
+  height: 100%;
+  width: 234px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px 0 20px 0;
+}
+ul.slider-side-list .option-title {
+  position: relative;
+  font-size: 14px;
+  line-height: 42px;
+  width: 100%;
+  display: block;
+  height: 42px;
+  color: #fff;
+  float: left;
+  padding: 0 0 0 28px;
+  cursor: pointer;
+}
+ul.slider-side-list .option-title .icono-caretRight {
+  position: absolute;
+  transform: scale(0.6, 0.6);
+  right: 14px;
+  top: 4px;
+}
+ul.slider-side-list .option-title:hover {
+  background-color: #f57c00;
+}
+
+/* Side hover content list config */
+
+ul.side-content-list {
+  display: inline-block;
+  position: absolute;
+  padding-top: 2px;
+  top: 0;
+  left: 234px;
+  font-size: 0;
+  height: 460px;
+  writing-mode: vertical-lr;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  visibility: hidden;
+}
+ul.side-content-list > li {
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  cursor: pointer;
+}
+span.option-title:hover + ul {
+  visibility: visible;
+}
+i.item-img.ccpro {
+  display: inline-block;
+  float: left;
+  width: 68px;
+  height: 76px;
+  background-image: url(slider/miccpro.webp);
+  background-position: left 13px top 16px;
+  background-repeat: no-repeat;
+}
+i.item-img {
+  display: inline-block;
+  float: left;
+  width: 68px;
+  height: 76px;
+  background-image: url(slider/xiaoai.webp);
+  background-position: left 13px top 16px;
+  background-repeat: no-repeat;
+}
+span.item-title {
+  font-size: 14px;
+  float: left;
+  width: 180px;
+  height: 76px;
+  color: black;
+  line-height: 76px;
+  z-index: 9999;
+  display: inline-block;
+  text-align: left;
+}
+ul.side-content-list:hover {
+  visibility: visible;
+}
+ul.side-content-list > li:hover > span {
+  color: #f57c00;
+}
+/* Modify radio button and display */
+input[name="slider"] {
+  display: none;
+}
+input[name="slider"] + label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  outline: none;
+}
+input[name="slider"] + label::before {
+  content: "";
+  float: right;
+  box-sizing: border-box;
+  margin: 5px;
+  margin-top: 415px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+input[name="slider"]:nth-of-type(1) + label::before {
+  margin-right: 45px;
+}
+input[name="slider"] + label:hover::before,
+input[name="slider"]:checked + label::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: #bdbdbd;
+  box-shadow: 0 0 0 1.3px rgba(255, 255, 255, 1),
+    inset 0 0 0 1.5px rgba(255, 255, 255, 1);
+  transition: 200ms ease-in;
+  opacity: 0.8;
+}
+/* Transition of the slider image and its controller */
+input[id="img-01"]:checked ~ div.slider-img > p:nth-of-type(5) {
+  opacity: 1;
+}
+input[id="img-01"]:checked ~ div.left-button > label:nth-of-type(2),
+input[id="img-01"]:checked ~ div.right-button > label:nth-of-type(5) {
+  display: block;
+}
+input[id="img-02"]:checked ~ div.slider-img > p:nth-of-type(4) {
+  opacity: 1;
+}
+input[id="img-02"]:checked ~ div.left-button > label:nth-of-type(3),
+input[id="img-02"]:checked ~ div.right-button > label:nth-of-type(1) {
+  display: block;
+}
+input[id="img-03"]:checked ~ div.slider-img > p:nth-of-type(3) {
+  opacity: 1;
+}
+input[id="img-03"]:checked ~ div.left-button > label:nth-of-type(4),
+input[id="img-03"]:checked ~ div.right-button > label:nth-of-type(2) {
+  display: block;
+}
+input[id="img-04"]:checked ~ div.slider-img > p:nth-of-type(2) {
+  opacity: 1;
+}
+input[id="img-04"]:checked ~ div.left-button > label:nth-of-type(5),
+input[id="img-04"]:checked ~ div.right-button > label:nth-of-type(3) {
+  display: block;
+}
+input[id="img-05"]:checked ~ div.slider-img > p:nth-of-type(1) {
+  opacity: 1;
+}
+input[id="img-05"]:checked ~ div.left-button > label:nth-of-type(1),
+input[id="img-05"]:checked ~ div.right-button > label:nth-of-type(4) {
+  display: block;
+}
+/* Left button style and display */
+div.left-button {
+  width: 40px;
+  height: 69px;
+  position: absolute;
+  top: 195px;
+  left: 234px;
+  overflow: hidden;
+}
+div.left-button > label {
+  position: absolute;
+  width: 40px;
+  height: 69px;
+  background-image: url(icons/icon-slides.png);
+  background-position: top 0 left -83px;
+  display: none;
+  cursor: pointer;
+}
+div.left-button > label:hover {
+  background-image: url(icons/icon-slides.png);
+  background-position: top 0 left 0px;
+}
+/* Right button style and display */
+div.right-button {
+  width: 40px;
+  height: 69px;
+  position: absolute;
+  top: 195px;
+  right: 0;
+  overflow: hidden;
+}
+div.right-button > label {
+  position: absolute;
+  width: 40px;
+  height: 69px;
+  background-image: url(icons/icon-slides.png);
+  background-position: top 0 left -123px;
+  display: none;
+  cursor: pointer;
+}
+div.right-button > label:hover {
+  background-image: url(icons/icon-slides.png);
+  background-position: top 0 left -41px;
+}
+/* Image group and image setting */
+div.slider-img {
+  width: 1226px;
+  height: 460px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+div.slider-img p {
+  display: block;
+  position: absolute;
+  width: 1226px;
+  height: 460px;
+  opacity: 0;
+  transition: opacity 1200ms ease;
+}
+p.img-01 {
+  background-image: url(slider/slider-01.webp);
+}
+p.img-02 {
+  background-image: url(slider/slider-02.webp);
+}
+p.img-03 {
+  background-image: url(slider/slider-03.webp);
+}
+p.img-04 {
+  background-image: url(slider/slider-04.jpg);
+  background-repeat: no-repeat;
+  background-size: 1226px 460px;
+}
+p.img-05 {
+  background-image: url(slider/slider-05.webp);
+}

@@ -1,0 +1,434 @@
+div.main-body {
+  width: 100%;
+  background-color: #f5f5f5;
+  height: 6019px;
+  margin-top: 25px;
+  padding-top: 4px;
+  padding-bottom: 12px;
+  z-index: 5;
+  scroll-behavior: smooth;
+}
+
+/* Flash sale position */
+div.main-body > div.flash-sale {
+  width: 1226px;
+  height: 398px;
+  display: block;
+  margin: auto;
+  /* border: 1px solid; */
+  position: relative;
+}
+div.flash-sale > div.flash-sale-header {
+  display: block;
+  width: 1226px;
+  height: 58px;
+  /* border: 1px solid; */
+}
+div.flash-sale > div.flash-sale-countdown {
+  width: 234px;
+  height: 340px;
+  background-color: #f1eded;
+  border-top: 1px solid #e53935;
+}
+div.flash-sale > div.flash-sale-carousel {
+  display: block;
+  width: 978px;
+  height: 377px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-left: 14px;
+  overflow: hidden;
+}
+div.flash-sale-left-button > label {
+  display: block;
+  width: 36px;
+  height: 24px;
+  border: 1px solid #e0e0e0;
+  position: absolute;
+  top: 0px;
+  right: 36px;
+  color: #b4b0b0;
+  cursor: pointer;
+}
+div.flash-sale-right-button > label {
+  display: block;
+  width: 36px;
+  height: 24px;
+  border: 1px solid #e0e0e0;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  color: #b4b0b0;
+  cursor: pointer;
+}
+div.flash-sale-left-button > label:hover,
+div.flash-sale-right-button > label:hover {
+  color: #f57c00;
+}
+div.flash-sale-right-button > label[for="none"],
+div.flash-sale-left-button > label[for="none"] {
+  color: #e0e0e0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/* Flash sale style */
+div.flash-sale-left-button > label i.icono-leftArrow {
+  display: block;
+  margin-top: 9px;
+}
+div.flash-sale-right-button > label i {
+  display: block;
+  margin-top: 9px;
+}
+div.flash-sale-header h2 {
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 58px;
+}
+
+/* Flash sale carousel config */
+ul.flash-sale-list {
+  width: 5444px;
+  height: 340px;
+  display: block;
+  position: absolute;
+  top: 37px;
+  left: 0;
+}
+ul.flash-sale-list::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  transition: 800ms ease;
+}
+ul.flash-sale-list > li.flash-sale-item {
+  display: block;
+  width: 234px;
+  height: 340px;
+  margin-right: 14px;
+  float: left;
+  background-color: #fff;
+  cursor: pointer;
+}
+ul.flash-sale-list > li.flash-sale-item:last-of-type {
+  margin-right: 0px;
+}
+/* Flash sale carousel button config */
+div.flash-sale-carousel > input[name="carousel"] {
+  display: none;
+  position: relative;
+  margin-top: 300px;
+}
+input[id="flash-14"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: 0;
+  transition: 800ms ease;
+}
+input[id="flash-58"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: -992px;
+  transition: 800ms ease;
+}
+input[id="flash-912"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: -1984px;
+  transition: 800ms ease;
+}
+input[id="flash-1316"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: -2976px;
+  transition: 800ms ease;
+}
+input[id="flash-1720"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: -3968px;
+  transition: 800ms ease;
+}
+input[id="flash-1922"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: -4464px;
+  transition: 800ms ease;
+}
+input[id="flash-1815"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: -3472px;
+  transition: 800ms ease;
+}
+input[id="flash-1411"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: -2480px;
+  transition: 800ms ease;
+}
+input[id="flash-107"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: -1488px;
+  transition: 800ms ease;
+}
+input[id="flash-63"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: -496px;
+  transition: 800ms ease;
+}
+input[id="flash-41"]:checked ~ div.flash-sale-carousel-image > ul {
+  left: 0;
+  transition: 800ms ease;
+}
+
+/* Flash sale carousel button config */
+div.flash-sale-left-button,
+div.flash-sale-right-button {
+  visibility: hidden;
+}
+input[id="flash-14"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-58"],
+input[id="flash-14"]:checked ~ div.flash-sale-left-button > label[for="none"] {
+  visibility: visible;
+}
+input[id="flash-58"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-912"],
+input[id="flash-58"]:checked
+  ~ div.flash-sale-left-button
+  > label[for="flash-14"] {
+  visibility: visible;
+}
+input[id="flash-912"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-1316"],
+input[id="flash-912"]:checked
+  ~ div.flash-sale-left-button
+  > label[for="flash-58"] {
+  visibility: visible;
+}
+input[id="flash-1316"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-1720"],
+input[id="flash-1316"]:checked
+  ~ div.flash-sale-left-button
+  > label[for="flash-912"] {
+  visibility: visible;
+}
+input[id="flash-1720"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-1922"],
+input[id="flash-1720"]:checked
+  ~ div.flash-sale-left-button
+  > label[for="flash-1316"] {
+  visibility: visible;
+}
+input[id="flash-1922"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="none"],
+input[id="flash-1922"]:checked
+  ~ div.flash-sale-left-button
+  > label[for="flash-1815"] {
+  visibility: visible;
+}
+input[id="flash-1815"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-1922"],
+input[id="flash-1815"]:checked
+  ~ div.flash-sale-left-button
+  > label[for="flash-1411"] {
+  visibility: visible;
+}
+input[id="flash-1411"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-1815"],
+input[id="flash-1411"]:checked
+  ~ div.flash-sale-left-button
+  > label[for="flash-107"] {
+  visibility: visible;
+}
+input[id="flash-107"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-1411"],
+input[id="flash-107"]:checked
+  ~ div.flash-sale-left-button
+  > label[for="flash-63"] {
+  visibility: visible;
+}
+input[id="flash-63"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-107"],
+input[id="flash-63"]:checked
+  ~ div.flash-sale-left-button
+  > label[for="flash-41"] {
+  visibility: visible;
+}
+input[id="flash-41"]:checked
+  ~ div.flash-sale-right-button
+  > label[for="flash-58"],
+input[id="flash-41"]:checked ~ div.flash-sale-left-button > label[for="none"] {
+  visibility: visible;
+}
+/* Flash sale image config */
+div.flash-sale-carousel-image > ul > li > span.flash-item-image {
+  display: block;
+  width: 160px;
+  height: 166px;
+  margin: auto;
+  margin-top: 39px;
+  margin-bottom: 22px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.flash-sale-carousel-image
+  > ul
+  > li:nth-of-type(6n + 1)
+  > span.flash-item-image {
+  background-image: url(flash-sale/erji.jpg);
+}
+div.flash-sale-carousel-image
+  > ul
+  > li:nth-of-type(6n + 2)
+  > span.flash-item-image {
+  background-image: url(flash-sale/chouzhi.jpg);
+}
+div.flash-sale-carousel-image
+  > ul
+  > li:nth-of-type(6n + 3)
+  > span.flash-item-image {
+  background-image: url(flash-sale/mofang.jpg);
+}
+div.flash-sale-carousel-image
+  > ul
+  > li:nth-of-type(6n + 4)
+  > span.flash-item-image {
+  background-image: url(flash-sale/led.jpg);
+}
+div.flash-sale-carousel-image
+  > ul
+  > li:nth-of-type(6n + 5)
+  > span.flash-item-image {
+  background-image: url(flash-sale/menling.jpg);
+}
+div.flash-sale-carousel-image
+  > ul
+  > li:nth-of-type(6n + 6)
+  > span.flash-item-image {
+  background-image: url(flash-sale/shubiao.jpg);
+}
+div.flash-sale-carousel-image
+  > ul
+  > li:nth-of-type(6n + 7)
+  > span.flash-item-image {
+  background-image: url(flash-sale/dianfanbao.jpg);
+}
+div.flash-sale-carousel-image
+  > ul
+  > li:nth-of-type(6n + 8)
+  > span.flash-item-image {
+  background-image: url(flash-sale/jingshuiqi.jpg);
+}
+div.flash-sale-carousel-image > ul > li:nth-of-type(6n + 1) {
+  border-top: 1px solid #ffac13;
+}
+div.flash-sale-carousel-image > ul > li:nth-of-type(6n + 2) {
+  border-top: 1px solid #83c44e;
+}
+div.flash-sale-carousel-image > ul > li:nth-of-type(6n + 3) {
+  border-top: 1px solid #2196f3;
+}
+div.flash-sale-carousel-image > ul > li:nth-of-type(6n + 4) {
+  border-top: 1px solid #00c0a5;
+}
+div.flash-sale-carousel-image > ul > li:nth-of-type(6n + 5) {
+  border-top: 1px solid #ffac13;
+}
+div.flash-sale-carousel-image > ul > li:nth-of-type(6n + 6) {
+  border-top: 1px solid #e53935;
+}
+div.flash-sale-carousel-image > ul > li:nth-of-type(6n + 7) {
+  border-top: 1px solid #83c44e;
+}
+div.flash-sale-carousel-image > ul > li:nth-of-type(6n + 8) {
+  border-top: 1px solid #2196f3;
+}
+/* Flash sale carousel item content */
+
+div.flash-sale-carousel-image > ul > li > span.flash-item-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+  overflow: hidden;
+  white-space: nowrap;
+}
+div.flash-sale-carousel-image > ul > li > span.flash-item-description {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #b0b0b0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+div.flash-sale-carousel-image > ul > li > p.price {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #ff6709;
+  overflow: hidden;
+  white-space: nowrap;
+}
+div.flash-sale-carousel-image > ul > li > p.price > span.flash-item-oldprice {
+  text-decoration: line-through;
+  color: #b0b0b0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* Flash sale countdown config */
+div.flash-sale-countdown > span.countdown-turn {
+  display: block;
+  margin-top: 54px;
+  text-align: center;
+  font-size: 21px;
+  color: #ef3a3b;
+}
+div.flash-sale-countdown > span.flash-image {
+  display: block;
+  width: 34px;
+  height: 53px;
+  margin: 25px auto;
+  background-image: url(flash-sale/flash.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 21px;
+  color: #ef3a3b;
+}
+div.flash-sale-countdown > span.countdown-status {
+  display: block;
+  font-size: 15px;
+  margin-top: 5px 0;
+  text-align: center;
+  color: #6f6d6d;
+}
+div.flash-sale-countdown > div.countdown-timer {
+  display: block;
+  width: 168px;
+  height: 46px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+  font-size: 0;
+}
+div.flash-sale-countdown > div.countdown-timer span {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-color: #605751;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 46px;
+}
+div.flash-sale-countdown > div.countdown-timer i {
+  display: inline-block;
+  width: 15px;
+  height: 46px;
+  line-height: 46px;
+  color: #605751;
+  font-size: 28px;
+  font-style: normal;
+  text-align: center;
+}

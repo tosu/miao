@@ -1,0 +1,72 @@
+.bsaapi #codefund_ad {
+  display: none;
+}
+
+#bin {
+  height: 100%;
+}
+
+#live>div>span.options {
+  white-space: nowrap;
+}
+
+#live>div.label {
+  overflow: auto;
+}
+
+iframe {
+  border: 5px solid;
+  padding: 0;
+}
+
+.card header {
+  display: none;
+}
+
+@media only screen and (max-width: 735px) {
+  div.menu.inline-menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  #source {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .mobile-nav-trigger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  #bin {
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  #control {
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  #control #panels>a.button {
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  #control>* {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  #control #panels>a.button {
+    height: 100%;
+  }
+}

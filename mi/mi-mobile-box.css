@@ -1,0 +1,167 @@
+/* Item box global config */
+div.main-item-box {
+  display: block;
+  position: relative;
+  width: 1226px;
+  height: 686px;
+  margin: auto;
+  margin-bottom: 8px;
+}
+div.main-item-box > div.box-header {
+  display: block;
+  width: 1226px;
+  height: 58px;
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+div.main-item-box > div.box-header > h2 {
+  display: block;
+  width: auto;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 58px;
+}
+div.main-item-box > div.box-header > .header-button {
+  display: block;
+  font-size: 16px;
+  line-height: 58px;
+  color: #424242;
+  transition: all 400ms;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+div.main-item-box > div.box-header > .header-button i.icono-caretRightCircle {
+  margin-top: -3px;
+  transform: scale(0.7, 0.7);
+}
+div.main-item-box > .box-left {
+  display: flex;
+  flex-wrap: wrap;
+  display: block;
+  width: 234px;
+  height: 614px;
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+div.main-item-box > .box-right {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 0;
+  top: 58px;
+  width: 992px;
+  height: 614px;
+  font-size: 0;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+/* Mobile Phone item box hover effect */
+div.main-item-box > div.box-header > .header-button:hover {
+  color: #f57c00;
+  transition: all 200ms ease;
+}
+div.main-item-box > .box-right span.box-item:hover,
+div.main-item-box > .box-left span.box-item:hover {
+  margin-top: -2px;
+  box-shadow: 5px 0px 15px -5px rgba(133, 133, 133, 0.5),
+    -5px 0px 15px -5px rgba(133, 133, 133, 0.5),
+    0px 5px 15px -5px rgba(133, 133, 133, 0.5);
+  transition: all 200ms ease;
+}
+/* Mobile Phone item box config */
+div.mobile-phone > .box-left > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+div.mobile-phone > .box-right > span {
+  width: 234px;
+  height: 300px;
+  padding: 20px 0;
+  margin-top: 0;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+/* Mobile Phone item box content config */
+div.mobile-phone > .box-right > .box-item > span.box-item-image {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 18px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.mobile-phone > .box-right > .box-item > span.box-item-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+  overflow: hidden;
+  white-space: nowrap;
+}
+div.mobile-phone > .box-right > .box-item > span.box-item-description {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #b0b0b0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+div.mobile-phone > .box-right > .box-item > p.price {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #ff6709;
+  overflow: hidden;
+  white-space: nowrap;
+}
+div.mobile-phone > .box-right > .box-item > p.price > span.box-item-oldprice {
+  text-decoration: line-through;
+  color: #b0b0b0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* Mobile Phone item box image config */
+div.mobile-phone > .box-left > span.box-item {
+  background-image: url(banner/mobile/left-01.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.mobile-phone > .box-right > .box-item:nth-of-type(1) > span.box-item-image {
+  background-image: url(banner/mobile/right-01.webp);
+}
+div.mobile-phone > .box-right > .box-item:nth-of-type(2) > span.box-item-image {
+  background-image: url(banner/mobile/right-02.webp);
+}
+div.mobile-phone > .box-right > .box-item:nth-of-type(3) > span.box-item-image {
+  background-image: url(banner/mobile/right-03.webp);
+}
+div.mobile-phone > .box-right > .box-item:nth-of-type(4) > span.box-item-image {
+  background-image: url(banner/mobile/right-04.webp);
+}
+div.mobile-phone > .box-right > .box-item:nth-of-type(5) > span.box-item-image {
+  background-image: url(banner/mobile/right-05.webp);
+}
+div.mobile-phone > .box-right > .box-item:nth-of-type(6) > span.box-item-image {
+  background-image: url(banner/mobile/right-06.webp);
+}
+div.mobile-phone > .box-right > .box-item:nth-of-type(7) > span.box-item-image {
+  background-image: url(banner/mobile/right-07.webp);
+}
+div.mobile-phone > .box-right > .box-item:nth-of-type(8) > span.box-item-image {
+  background-image: url(banner/mobile/right-08.webp);
+}

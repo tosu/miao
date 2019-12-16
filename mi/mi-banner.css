@@ -1,0 +1,49 @@
+div.banner-container {
+  display: block;
+  width: 1226px;
+  height: 120px;
+  margin: auto;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  scroll-behavior: smooth;
+}
+div.banner-container span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+div.banner-container.banner-01 span {
+  background-image: url(banner/01.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.banner-container.banner-02 span {
+  background-image: url(banner/02.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.banner-container.banner-03 span {
+  background-image: url(banner/03.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.banner-container.banner-04 span {
+  background-image: url(banner/04.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.banner-container.banner-05 span {
+  background-image: url(banner/05.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.banner-container.banner-06 span {
+  background-image: url(banner/06.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.banner-container.banner-07 span {
+  background-image: url(banner/07.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

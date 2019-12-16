@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div.header-button {
+        display: inline-block;
+        height: auto;
+        width: auto;
+        font-size: 88px;
+        line-height: 58px;
+        position: absolute;
+        right: 500px;
+        top: 0;
+      }
+      div.header-button.button-01 {
+        right: 800px;
+      }
+      div.header-button.hovered {
+        color: red;
+      }
+      div.header-button.button-02.hovered {
+        animation: 0.001s forwards paused out;
+      }
+      .button-01.hovered {
+        animation: 0.001s forwards paused in;
+      }
+
+      .button-01.unhover:hover ~ .button-01.hovered {
+        animation-name: out;
+        animation-play-state: running;
+      }
+
+      .button-01.unhover:hover ~ .button-02.hovered {
+        animation-name: in;
+        animation-play-state: running;
+      }
+      .button-02.unhover:hover ~ .button-02.hovered {
+        animation-name: out;
+        animation-play-state: running;
+      }
+      .button-02.unhover:hover ~ .button-01.hovered {
+        animation-name: in;
+        animation-play-state: running;
+      }
+
+      @keyframes out {
+        0% {
+          z-index: -1;
+        }
+        100% {
+          z-index: 99;
+        }
+      }
+
+      @keyframes in {
+        0% {
+          z-index: 99;
+        }
+        100% {
+          z-index: -1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-button button-01 unhover">1111</div>
+    <div class="header-button button-02 unhover">2222</div>
+    <div class="header-button button-01 hovered">1111</div>
+    <div class="header-button button-02 hovered">2222</div>
+  </body>
+</html>

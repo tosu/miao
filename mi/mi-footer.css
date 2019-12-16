@@ -1,0 +1,214 @@
+div.footer-container {
+  display: block;
+  width: 100%;
+  height: 503px;
+}
+div.footer-container > .footer-body {
+  width: 100%;
+  height: 272px;
+}
+
+div.footer-container > .footer-body > .footer-service {
+  width: 1226px;
+  height: 79px;
+  padding: 27px 0;
+  margin: auto;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+div.footer-container > .footer-body > .footer-service .footer-service-list {
+  display: flow-root;
+  width: 100%;
+  height: 25px;
+}
+div.footer-container > .footer-body > .footer-service .footer-service-item {
+  float: left;
+  width: 20%;
+  height: 25px;
+  border-left: 1px solid #e0e0e0;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 200ms ease;
+}
+div.footer-container
+  > .footer-body
+  > .footer-service
+  .footer-service-item:first-of-type {
+  border-left: none;
+}
+
+div.footer-container
+  > .footer-body
+  > .footer-service
+  .footer-service-item:hover {
+  transition: 200ms ease;
+  color: #ff6709;
+}
+
+div.footer-container .footer-links {
+  display: block;
+  margin: auto;
+  width: 1226px;
+  height: 122px;
+  padding: 40px 0;
+}
+
+div.footer-container .footer-links > .footer-links-list {
+  display: flow-root;
+  width: 1226px;
+  height: 122px;
+}
+.footer-links-list .footer-links-item {
+  float: left;
+  width: 160px;
+  height: 112px;
+  margin: 0;
+}
+.footer-links-list .footer-links-item.last-item {
+  float: right;
+  width: 251px;
+  height: 112px;
+  border-left: 1px solid #e0e0e0;
+  text-align: center;
+  color: #616161;
+}
+.footer-links-list .footer-links-item > span {
+  display: block;
+  cursor: pointer;
+}
+.footer-links-list .footer-links-item .links-title {
+  margin: -1px 0 26px;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #424242;
+}
+.footer-links-list .footer-links-item .links-name {
+  margin-top: 10px;
+  color: #757575;
+  font-size: 12px;
+}
+.footer-links-list .footer-links-item.last-item .phone {
+  margin: 0 0 5px;
+  font-size: 22px;
+  line-height: 1;
+  color: #ff6700;
+  cursor: text;
+}
+.footer-links-list .footer-links-item.last-item .phoe-detail {
+  font-size: 12px;
+  cursor: text;
+}
+.footer-links-list .footer-links-item.last-item .phoe-detail-desc {
+  margin: 0 0 16px;
+  font-size: 12px;
+  cursor: text;
+}
+.footer-links-list .footer-links-item.last-item .service {
+  width: 118px;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
+  border: 1px solid #ff6700;
+  background: #fff;
+  color: #ff6700;
+  margin: auto;
+  transition: 200ms ease;
+}
+.footer-links-list .footer-links-item.last-item .service i {
+  transform: scale(0.6, 0.6);
+}
+
+.footer-links-list .footer-links-item.last-item .service:hover {
+  background: #ff6700;
+  transition: 200ms ease;
+  color: #fff;
+}
+
+div.footer-info {
+  height: 231px;
+  padding: 30px 0;
+  font-size: 12px;
+  background: #fafafa;
+}
+div.footer-info .info-container {
+  position: relative;
+  width: 1226px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.info-container .logo {
+  width: 57px;
+  height: 57px;
+  margin-right: 10px;
+  background: url(//s02.mifile.cn/assets/static/image/logo-footer.png) no-repeat
+    50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.info-container .info-text {
+  color: #b0b0b0;
+  display: block;
+  width: 1159px;
+  height: 109px;
+  position: absolute;
+  right: 0;
+}
+p.site {
+  display: block;
+  width: 1159px;
+  height: 37px;
+  font-size: 0;
+}
+p.site > span.site-links {
+  color: #757575;
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  padding: 0 5px;
+  position: relative;
+  cursor: pointer;
+  transition: 200ms ease;
+}
+p.site > span.site-links::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 14px;
+  border-left: 1px solid #757575;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+p.site > span.site-links:last-of-type:after {
+  content: "";
+  display: none;
+}
+
+p.site > span.site-links:hover {
+  color: #ff6709;
+  transition: 200ms ease;
+}
+p.info-links span {
+  line-height: 18px;
+  color: #b0b0b0;
+  font-size: 12px;
+}
+p.info-links span:hover {
+  color: #ff6709;
+  transition: 200ms ease;
+  cursor: pointer;
+}
+div.slogan {
+  clear: both;
+  margin: 30px auto 0;
+  width: 267px;
+  height: 19px;
+  background: url(//s02.mifile.cn/assets/static/image/slogan2016.png) no-repeat
+    center 0;
+}
