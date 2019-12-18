@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OALD</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .flex-container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+      }
+      .left-side {
+        width: 25%;
+        flex-basis: 100%;
+        background-color: #ffff99;
+      }
+      .middle-header {
+        width: 35%;
+        flex-basis: 35%;
+        background-color: #ffcc99;
+      }
+      .middle-content {
+        width: 35%;
+        flex-basis: 65%;
+        background-color: #ffff00;
+      }
+      .right-side-01 {
+        width: 20%;
+        flex-basis: 100%;
+        background-color: #ccff66;
+      }
+      .right-side-02 {
+        width: 20%;
+        flex-basis: 100%;
+        background-color: #009966;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="left-side">1</div>
+      <div class="middle-header">2</div>
+      <div class="middle-content">3</div>
+      <div class="right-side-01">4</div>
+      <div class="right-side-02">5</div>
+    </div>
+  </body>
+</html>

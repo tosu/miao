@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QQ Mail</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .flex-container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        background-color: black;
+      }
+      .header {
+        flex-basis: 100%;
+        height: 88px;
+        background-color: #ffcc99;
+      }
+      .side-bar {
+        flex-basis: 86px;
+        height: calc(100% - 88px);
+        background-color: #99cc99;
+      }
+      .content {
+        flex-grow: 1;
+        height: calc(100% - 88px);
+        background-color: #ffff99;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="header"></div>
+      <div class="side-bar"></div>
+      <div class="content"></div>
+    </div>
+  </body>
+</html>
