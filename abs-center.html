@@ -13,7 +13,8 @@
         background: #ffcc99;
       }
 
-      h1 {
+      h1,
+      h2 {
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         color: #990033;
         text-align: center;
@@ -35,7 +36,7 @@
       div.abs-container {
         background: #ffff99;
         margin: 20px 0;
-        padding: 50px;
+        padding: 20px;
         text-align: center;
       }
       div.margin-center {
@@ -48,11 +49,10 @@
 
       div.positioned-container {
         position: relative;
-
         height: 200px;
         background: #ffff99;
         margin: 20px 0;
-        padding: 50px;
+        padding: 20px;
         text-align: center;
       }
 
@@ -68,6 +68,96 @@
         margin-left: -150px;
         margin-top: -50px;
       }
+
+      div.table-container {
+        display: table;
+        width: 100%;
+        height: 200px;
+        background: #ffff99;
+        margin: 20px 0;
+        padding: 20px;
+      }
+      div.table-center {
+        display: table-cell;
+        background: #ffcccc;
+        color: #990033;
+        padding: 30px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      div.table-cell {
+        display: table-cell;
+        width: 100vw;
+        height: 200px;
+        background: #ffff99;
+        margin: 20px 0;
+        padding: 20px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      div.table-cell-content {
+        display: inline-block;
+        background: #ffcccc;
+        color: #990033;
+        width: 300px;
+        height: 100px;
+        padding: 30px;
+      }
+
+      div.transform-container {
+        position: relative;
+        height: 200px;
+        background: #ffff99;
+        margin: 20px 0;
+        padding: 20px;
+      }
+      div.transform {
+        width: 300px;
+        height: 100px;
+        background: #ffcccc;
+        color: #990033;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      div.flexbox-container {
+        position: relative;
+        display: flex;
+        height: 200px;
+        background: #ffff99;
+        margin: 20px 0;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      div.flex {
+        width: 300px;
+        height: 100px;
+        background: #ffcccc;
+        color: #990033;
+        text-align: center;
+      }
+
+      div.grid-container {
+        position: relative;
+        display: grid;
+        height: 200px;
+        background: #ffff99;
+        margin: 20px 0;
+        padding: 20px;
+        justify-content: cent;
+      }
+      div.grid {
+        width: 300px;
+        height: 100px;
+        margin: auto;
+        background: #ffcccc;
+        color: #990033;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -80,14 +170,34 @@
     <div class="abs-container">
       <div class="margin-center">Margin Center</div>
     </div>
+    <h2>User minus margin</h2>
     <div class="positioned-container">
       <div class="minus-margin">
         Minus Margin <br />
         With Positioned Absolute
       </div>
     </div>
-    <div class="tabel-container">
-      <div class="table-cell"></div>
+    <h2>Use transform</h2>
+    <div class="transform-container">
+      <div class="transform">And position:absolute also!</div>
+    </div>
+    <h2>Container set to table and item would be stretched</h2>
+    <div class="table-container">
+      <div class="table-center">
+        This can be stretched and centered correctly!
+      </div>
+    </div>
+    <h2>Container set to table-cell</h2>
+    <div class="table-cell">
+      <div class="table-cell-content">Table cell old school way!</div>
+    </div>
+    <h2>Flexbox modern way</h2>
+    <div class="flexbox-container">
+      <div class="flex">Flex makes things quite eaasy.</div>
+    </div>
+    <h2>Grid you may use</h2>
+    <div class="grid-container">
+      <div class="grid">Grid is easiest maybe?</div>
     </div>
   </body>
 </html>
