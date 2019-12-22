@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QQ mail float</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
+      .header {
+        width: 100%;
+        height: 88px;
+        background-color: #ffcc99;
+        float: left;
+      }
+      .side-bar {
+        float: left;
+        width: 86px;
+        height: calc(100% - 88px);
+        background-color: #99cc99;
+      }
+      .content {
+        float: left;
+        width: calc(100% - 86px);
+        height: calc(100% - 88px);
+        background-color: #ffff99;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"></div>
+      <div class="side-bar"></div>
+      <div class="content"></div>
+    </div>
+  </body>
+</html>
