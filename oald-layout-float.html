@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OALD float</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .sidebar {
+        width: 25%;
+        height: 100%;
+        background-color: #ffcc99;
+        float: left;
+      }
+      .middle {
+        width: 35%;
+        height: 100%;
+        float: left;
+      }
+      .content-top {
+        width: 100%;
+        height: 35%;
+        background-color: #ffff99;
+      }
+      .content-bottom {
+        width: 100%;
+        height: 65%;
+        background-color: #ffff00;
+      }
+      .rightbar1 {
+        width: 20%;
+        height: 100%;
+        float: left;
+        background-color: #ccff66;
+      }
+      .rightbar2 {
+        width: 20%;
+        height: 100%;
+        float: left;
+        background-color: #009966;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar"></div>
+      <div class="middle">
+        <div class="content-top"><p>Float</p></div>
+        <div class="content-bottom"></div>
+      </div>
+      <div class="right rightbar1"></div>
+      <div class="right rightbar2"></div>
+    </div>
+  </body>
+</html>
