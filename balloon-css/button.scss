@@ -44,14 +44,7 @@ button {
         }
 
         &[data-balloon-pos="up"],
-        &:not([data-balloon-pos="up"]),
-        &:not([data-balloon-pos="left"]),
-        &:not([data-balloon-pos="right"]),
-        &:not([data-balloon-pos="down"]),
-        &:not([data-balloon-pos="up-left"]),
-        &:not([data-balloon-pos="up-right"]),
-        &:not([data-balloon-pos="down-left"]),
-        &:not([data-balloon-pos="down-right"]) {
+        &:not([data-balloon-pos]) {
             &::before {
                 content: "";
                 width: 0;

@@ -44,7 +44,7 @@ button[aria-label]::after {
   z-index: 50;
 }
 
-button[aria-label][data-balloon-pos="up"]::before, button[aria-label]:not([data-balloon-pos="up"])::before, button[aria-label]:not([data-balloon-pos="left"])::before, button[aria-label]:not([data-balloon-pos="right"])::before, button[aria-label]:not([data-balloon-pos="down"])::before, button[aria-label]:not([data-balloon-pos="up-left"])::before, button[aria-label]:not([data-balloon-pos="up-right"])::before, button[aria-label]:not([data-balloon-pos="down-left"])::before, button[aria-label]:not([data-balloon-pos="down-right"])::before {
+button[aria-label][data-balloon-pos="up"]::before, button[aria-label]:not([data-balloon-pos])::before {
   content: "";
   width: 0;
   height: 0;
@@ -61,7 +61,7 @@ button[aria-label][data-balloon-pos="up"]::before, button[aria-label]:not([data-
           transform: translate(-50%, var(--balloon-move));
 }
 
-button[aria-label][data-balloon-pos="up"]::after, button[aria-label]:not([data-balloon-pos="up"])::after, button[aria-label]:not([data-balloon-pos="left"])::after, button[aria-label]:not([data-balloon-pos="right"])::after, button[aria-label]:not([data-balloon-pos="down"])::after, button[aria-label]:not([data-balloon-pos="up-left"])::after, button[aria-label]:not([data-balloon-pos="up-right"])::after, button[aria-label]:not([data-balloon-pos="down-left"])::after, button[aria-label]:not([data-balloon-pos="down-right"])::after {
+button[aria-label][data-balloon-pos="up"]::after, button[aria-label]:not([data-balloon-pos])::after {
   bottom: 100%;
   left: 50%;
   margin-bottom: 10px;
@@ -71,61 +71,61 @@ button[aria-label][data-balloon-pos="up"]::after, button[aria-label]:not([data-b
           transform-origin: top;
 }
 
-button[aria-label][data-balloon-pos="up"]:hover::before, button[aria-label]:not([data-balloon-pos="up"]):hover::before, button[aria-label]:not([data-balloon-pos="left"]):hover::before, button[aria-label]:not([data-balloon-pos="right"]):hover::before, button[aria-label]:not([data-balloon-pos="down"]):hover::before, button[aria-label]:not([data-balloon-pos="up-left"]):hover::before, button[aria-label]:not([data-balloon-pos="up-right"]):hover::before, button[aria-label]:not([data-balloon-pos="down-left"]):hover::before, button[aria-label]:not([data-balloon-pos="down-right"]):hover::before {
+button[aria-label][data-balloon-pos="up"]:hover::before, button[aria-label]:not([data-balloon-pos]):hover::before {
   opacity: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 
-button[aria-label][data-balloon-pos="up"]:hover::after, button[aria-label]:not([data-balloon-pos="up"]):hover::after, button[aria-label]:not([data-balloon-pos="left"]):hover::after, button[aria-label]:not([data-balloon-pos="right"]):hover::after, button[aria-label]:not([data-balloon-pos="down"]):hover::after, button[aria-label]:not([data-balloon-pos="up-left"]):hover::after, button[aria-label]:not([data-balloon-pos="up-right"]):hover::after, button[aria-label]:not([data-balloon-pos="down-left"]):hover::after, button[aria-label]:not([data-balloon-pos="down-right"]):hover::after {
+button[aria-label][data-balloon-pos="up"]:hover::after, button[aria-label]:not([data-balloon-pos]):hover::after {
   opacity: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 
-button[aria-label][data-balloon-pos="up"]:focus::before, button[aria-label]:not([data-balloon-pos="up"]):focus::before, button[aria-label]:not([data-balloon-pos="left"]):focus::before, button[aria-label]:not([data-balloon-pos="right"]):focus::before, button[aria-label]:not([data-balloon-pos="down"]):focus::before, button[aria-label]:not([data-balloon-pos="up-left"]):focus::before, button[aria-label]:not([data-balloon-pos="up-right"]):focus::before, button[aria-label]:not([data-balloon-pos="down-left"]):focus::before, button[aria-label]:not([data-balloon-pos="down-right"]):focus::before {
+button[aria-label][data-balloon-pos="up"]:focus::before, button[aria-label]:not([data-balloon-pos]):focus::before {
   opacity: 1;
   -webkit-transform: translate(-50%, 3px);
           transform: translate(-50%, 3px);
 }
 
-button[aria-label][data-balloon-pos="up"]:focus::after, button[aria-label]:not([data-balloon-pos="up"]):focus::after, button[aria-label]:not([data-balloon-pos="left"]):focus::after, button[aria-label]:not([data-balloon-pos="right"]):focus::after, button[aria-label]:not([data-balloon-pos="down"]):focus::after, button[aria-label]:not([data-balloon-pos="up-left"]):focus::after, button[aria-label]:not([data-balloon-pos="up-right"]):focus::after, button[aria-label]:not([data-balloon-pos="down-left"]):focus::after, button[aria-label]:not([data-balloon-pos="down-right"]):focus::after {
+button[aria-label][data-balloon-pos="up"]:focus::after, button[aria-label]:not([data-balloon-pos]):focus::after {
   opacity: 1;
   -webkit-transform: translate(-50%, 3px);
           transform: translate(-50%, 3px);
 }
 
-button[aria-label][data-balloon-pos="up"]:focus:hover::before, button[aria-label]:not([data-balloon-pos="up"]):focus:hover::before, button[aria-label]:not([data-balloon-pos="left"]):focus:hover::before, button[aria-label]:not([data-balloon-pos="right"]):focus:hover::before, button[aria-label]:not([data-balloon-pos="down"]):focus:hover::before, button[aria-label]:not([data-balloon-pos="up-left"]):focus:hover::before, button[aria-label]:not([data-balloon-pos="up-right"]):focus:hover::before, button[aria-label]:not([data-balloon-pos="down-left"]):focus:hover::before, button[aria-label]:not([data-balloon-pos="down-right"]):focus:hover::before {
+button[aria-label][data-balloon-pos="up"]:focus:hover::before, button[aria-label]:not([data-balloon-pos]):focus:hover::before {
   opacity: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 
-button[aria-label][data-balloon-pos="up"]:focus:hover::after, button[aria-label]:not([data-balloon-pos="up"]):focus:hover::after, button[aria-label]:not([data-balloon-pos="left"]):focus:hover::after, button[aria-label]:not([data-balloon-pos="right"]):focus:hover::after, button[aria-label]:not([data-balloon-pos="down"]):focus:hover::after, button[aria-label]:not([data-balloon-pos="up-left"]):focus:hover::after, button[aria-label]:not([data-balloon-pos="up-right"]):focus:hover::after, button[aria-label]:not([data-balloon-pos="down-left"]):focus:hover::after, button[aria-label]:not([data-balloon-pos="down-right"]):focus:hover::after {
+button[aria-label][data-balloon-pos="up"]:focus:hover::after, button[aria-label]:not([data-balloon-pos]):focus:hover::after {
   opacity: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 
-button[aria-label][data-balloon-pos="up"][data-balloon-visible]::before, button[aria-label]:not([data-balloon-pos="up"])[data-balloon-visible]::before, button[aria-label]:not([data-balloon-pos="left"])[data-balloon-visible]::before, button[aria-label]:not([data-balloon-pos="right"])[data-balloon-visible]::before, button[aria-label]:not([data-balloon-pos="down"])[data-balloon-visible]::before, button[aria-label]:not([data-balloon-pos="up-left"])[data-balloon-visible]::before, button[aria-label]:not([data-balloon-pos="up-right"])[data-balloon-visible]::before, button[aria-label]:not([data-balloon-pos="down-left"])[data-balloon-visible]::before, button[aria-label]:not([data-balloon-pos="down-right"])[data-balloon-visible]::before {
+button[aria-label][data-balloon-pos="up"][data-balloon-visible]::before, button[aria-label]:not([data-balloon-pos])[data-balloon-visible]::before {
   opacity: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 
-button[aria-label][data-balloon-pos="up"][data-balloon-visible]::after, button[aria-label]:not([data-balloon-pos="up"])[data-balloon-visible]::after, button[aria-label]:not([data-balloon-pos="left"])[data-balloon-visible]::after, button[aria-label]:not([data-balloon-pos="right"])[data-balloon-visible]::after, button[aria-label]:not([data-balloon-pos="down"])[data-balloon-visible]::after, button[aria-label]:not([data-balloon-pos="up-left"])[data-balloon-visible]::after, button[aria-label]:not([data-balloon-pos="up-right"])[data-balloon-visible]::after, button[aria-label]:not([data-balloon-pos="down-left"])[data-balloon-visible]::after, button[aria-label]:not([data-balloon-pos="down-right"])[data-balloon-visible]::after {
+button[aria-label][data-balloon-pos="up"][data-balloon-visible]::after, button[aria-label]:not([data-balloon-pos])[data-balloon-visible]::after {
   opacity: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 
-button[aria-label][data-balloon-pos="up"][data-balloon-visible]:focus::before, button[aria-label]:not([data-balloon-pos="up"])[data-balloon-visible]:focus::before, button[aria-label]:not([data-balloon-pos="left"])[data-balloon-visible]:focus::before, button[aria-label]:not([data-balloon-pos="right"])[data-balloon-visible]:focus::before, button[aria-label]:not([data-balloon-pos="down"])[data-balloon-visible]:focus::before, button[aria-label]:not([data-balloon-pos="up-left"])[data-balloon-visible]:focus::before, button[aria-label]:not([data-balloon-pos="up-right"])[data-balloon-visible]:focus::before, button[aria-label]:not([data-balloon-pos="down-left"])[data-balloon-visible]:focus::before, button[aria-label]:not([data-balloon-pos="down-right"])[data-balloon-visible]:focus::before {
+button[aria-label][data-balloon-pos="up"][data-balloon-visible]:focus::before, button[aria-label]:not([data-balloon-pos])[data-balloon-visible]:focus::before {
   opacity: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 
-button[aria-label][data-balloon-pos="up"][data-balloon-visible]:focus::after, button[aria-label]:not([data-balloon-pos="up"])[data-balloon-visible]:focus::after, button[aria-label]:not([data-balloon-pos="left"])[data-balloon-visible]:focus::after, button[aria-label]:not([data-balloon-pos="right"])[data-balloon-visible]:focus::after, button[aria-label]:not([data-balloon-pos="down"])[data-balloon-visible]:focus::after, button[aria-label]:not([data-balloon-pos="up-left"])[data-balloon-visible]:focus::after, button[aria-label]:not([data-balloon-pos="up-right"])[data-balloon-visible]:focus::after, button[aria-label]:not([data-balloon-pos="down-left"])[data-balloon-visible]:focus::after, button[aria-label]:not([data-balloon-pos="down-right"])[data-balloon-visible]:focus::after {
+button[aria-label][data-balloon-pos="up"][data-balloon-visible]:focus::after, button[aria-label]:not([data-balloon-pos])[data-balloon-visible]:focus::after {
   opacity: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
