@@ -43,7 +43,15 @@ button {
             z-index: 50;
         }
 
-        &[data-balloon-pos="up"] {
+        &[data-balloon-pos="up"],
+        &:not([data-balloon-pos="up"]),
+        &:not([data-balloon-pos="left"]),
+        &:not([data-balloon-pos="right"]),
+        &:not([data-balloon-pos="down"]),
+        &:not([data-balloon-pos="up-left"]),
+        &:not([data-balloon-pos="up-right"]),
+        &:not([data-balloon-pos="down-left"]),
+        &:not([data-balloon-pos="down-right"]) {
             &::before {
                 content: "";
                 width: 0;
@@ -100,6 +108,30 @@ button {
                 &::after {
                     opacity: 1;
                     transform: translate(-50%, 0);
+                }
+            }
+
+            &[data-balloon-visible] {
+                &::before {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                }
+
+                &:focus {
+                    &::before {
+                        opacity: 1;
+                        transform: translate(-50%, 0);
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        transform: translate(-50%, 0);
+                    }
                 }
             }
         }
@@ -163,6 +195,30 @@ button {
                     transform: translate(0, 0);
                 }
             }
+
+            &[data-balloon-visible] {
+                &::before {
+                    opacity: 1;
+                    transform: translate(50%, 0);
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                }
+
+                &:focus {
+                    &::before {
+                        opacity: 1;
+                        transform: translate(50%, 0);
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        transform: translate(50%, 0);
+                    }
+                }
+            }
         }
 
         &[data-balloon-pos="up-right"] {
@@ -222,6 +278,30 @@ button {
                 &::after {
                     opacity: 1;
                     transform: translate(-100%, 0);
+                }
+            }
+
+            &[data-balloon-visible] {
+                &::before {
+                    opacity: 1;
+                    transform: translate(-150%, 0);
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translate(-100%, 0);
+                }
+
+                &:focus {
+                    &::before {
+                        opacity: 1;
+                        transform: translate(-150%, 0);
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        transform: translate(-100%, 0);
+                    }
                 }
             }
         }
@@ -284,6 +364,30 @@ button {
                     transform: translate(0, -50%);
                 }
             }
+
+            &[data-balloon-visible] {
+                &::before {
+                    opacity: 1;
+                    transform: translate(0, -50%);
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translate(0, -50%);
+                }
+
+                &:focus {
+                    &::before {
+                        opacity: 1;
+                        transform: translate(0, -50%);
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
         }
 
         &[data-balloon-pos="right"] {
@@ -342,6 +446,30 @@ button {
                 &::after {
                     opacity: 1;
                     transform: translate(0, -50%);
+                }
+            }
+
+            &[data-balloon-visible] {
+                &::before {
+                    opacity: 1;
+                    transform: translate(0, -50%);
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translate(0, -50%);
+                }
+
+                &:focus {
+                    &::before {
+                        opacity: 1;
+                        transform: translate(0, -50%);
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        transform: translate(0, -50%);
+                    }
                 }
             }
         }
@@ -405,6 +533,30 @@ button {
                     transform: translate(-50%, 0);
                 }
             }
+
+            &[data-balloon-visible] {
+                &::before {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                }
+
+                &:focus {
+                    &::before {
+                        opacity: 1;
+                        transform: translate(-50%, 0);
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        transform: translate(-50%, 0);
+                    }
+                }
+            }
         }
 
         &[data-balloon-pos="down-left"] {
@@ -466,6 +618,30 @@ button {
                     transform: translate(0, 0);
                 }
             }
+
+            &[data-balloon-visible] {
+                &::before {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                }
+
+                &:focus {
+                    &::before {
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                }
+            }
         }
 
         &[data-balloon-pos="down-right"] {
@@ -525,6 +701,30 @@ button {
                 &::after {
                     opacity: 1;
                     transform: translate(-100%, 0);
+                }
+            }
+
+            &[data-balloon-visible] {
+                &::before {
+                    opacity: 1;
+                    transform: translate(-150%, 0);
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translate(-100%, 0);
+                }
+
+                &:focus {
+                    &::before {
+                        opacity: 1;
+                        transform: translate(-150%, 0);
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        transform: translate(-100%, 0);
+                    }
                 }
             }
         }
@@ -751,220 +951,16 @@ button {
             }
         }
 
-        &[data-balloon-visible] {
-            &::before {
-                opacity: 1;
-                transform: translate(-50%, 0);
-            }
-
-            &::after {
-                opacity: 1;
-                transform: translate(-50%, 0);
-            }
-
-            &:focus {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-            }
-        }
-
         &.tooltip-red {
             --balloon-color: red;
-
-            &::before {
-                content: "";
-                width: 0;
-                height: 0;
-                border: 5px solid transparent;
-                border-top-color: var(--balloon-color);
-                position: absolute;
-                transition: all 200ms ease-out 200ms;
-                opacity: 0;
-                z-index: 50;
-                bottom: 100%;
-                left: 50%;
-                transform: translate(-50%, var(--balloon-move));
-            }
-
-            &::after {
-                bottom: 100%;
-                left: 50%;
-                background-color: var(--balloon-color);
-                margin-bottom: 10px;
-                transform: translate(-50%, var(--balloon-move));
-                transform-origin: top;
-            }
-
-            &:hover {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-            }
-
-            &:focus {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 3px);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 3px);
-                }
-            }
-
-            &:focus:hover {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-            }
         }
 
         &.tooltip-big-text {
             --balloon-font-size: 20px;
-
-            &::before {
-                content: "";
-                width: 0;
-                height: 0;
-                border: 5px solid transparent;
-                border-top-color: var(--balloon-color);
-                position: absolute;
-                transition: all 200ms ease-out 200ms;
-                opacity: 0;
-                z-index: 50;
-                bottom: 100%;
-                left: 50%;
-                transform: translate(-50%, var(--balloon-move));
-            }
-
-            &::after {
-                bottom: 100%;
-                left: 50%;
-                font-size: var(--balloon-font-size);
-                padding: 10px 20px;
-                margin-bottom: 10px;
-                transform: translate(-50%, var(--balloon-move));
-                transform-origin: top;
-            }
-
-            &:hover {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-            }
-
-            &:focus {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 3px);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 3px);
-                }
-            }
-
-            &:focus:hover {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-            }
         }
 
         &.tooltip-slide {
             --balloon-move: 30px;
-
-            &::before {
-                content: "";
-                width: 0;
-                height: 0;
-                border: 5px solid transparent;
-                border-top-color: var(--balloon-color);
-                position: absolute;
-                transition: all 200ms ease-out 200ms;
-                opacity: 0;
-                z-index: 50;
-                bottom: 100%;
-                left: 50%;
-                transform: translate(-50%, var(--balloon-move));
-            }
-
-            &::after {
-                bottom: 100%;
-                left: 50%;
-                margin-bottom: 10px;
-                transform: translate(-50%, var(--balloon-move));
-                transform-origin: top;
-            }
-
-            &:hover {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-            }
-
-            &:focus {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 3px);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 3px);
-                }
-            }
-
-            &:focus:hover {
-                &::before {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translate(-50%, 0);
-                }
-            }
         }
 
 
