@@ -1,0 +1,330 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: #ffb641;
+}
+
+main {
+  display: block;
+  width: 100vw;
+  max-width: 100%;
+  margin-top: 100px;
+}
+
+main .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1004px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .main-container .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-container .header-container .header-title {
+  margin-top: 15px;
+  margin-bottom: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 23px;
+}
+
+main .main-container .header-container .header-title span {
+  color: #B71212;
+}
+
+main .main-container .header-container .header-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 356px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .main-container .header-container .header-text {
+  max-width: 60%;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main .main-container .header-container .header-text span {
+  color: #B71212;
+}
+
+main .main-container .hr {
+  height: 0;
+  border: 1px solid #ed8d36;
+  z-index: 99;
+}
+
+main .main-container .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .main-container .content-container h2 {
+  margin-top: 30px;
+  margin-bottom: 18px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+main .main-container .content-container p.content-text {
+  display: block;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+main .main-container .content-container p.content-text.drawbacks {
+  margin-bottom: 60px;
+}
+
+main .main-container .content-container p.content-text span.code-span {
+  padding: 4px;
+  border-radius: 2px;
+  background: #fff;
+  color: #0041BC;
+  -webkit-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+main .main-container .content-container .sample-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .main-container .content-container .sample-container .sample-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-container .content-container .sample-container .sample-group:nth-of-type(1) {
+  margin-top: 40px;
+}
+
+main .main-container .content-container .sample-container .sample-group span.code-block {
+  display: block;
+  -ms-flex-preferred-size: 780px;
+      flex-basis: 780px;
+  padding: 15px;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  background: #fff;
+  border-radius: 3px;
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-right: 45px;
+}
+
+main .main-container .content-container .sample-container .sample-group span.code-block span.tag {
+  color: #c71212;
+}
+
+main .main-container .content-container .sample-container .sample-group span.code-block span.attr-name {
+  color: #0041bc;
+}
+
+main .main-container .content-container .sample-container .sample-group span.code-block span.attr-value {
+  color: #b71212;
+}
+
+main .main-container .content-container .sample-container .code-block-full {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  background: #fff;
+  border-radius: 3px;
+  margin-bottom: 0;
+}
+
+main .main-container .content-container .sample-container .code-block-full .tag {
+  color: #c71212;
+}
+
+main .main-container .content-container .sample-container .code-block-full .attr-name {
+  color: #0041bc;
+}
+
+main .main-container .content-container .sample-container .code-block-full .attr-value {
+  color: #b71212;
+}
+
+main .main-container .content-container .sample-container .code-block-full .comments {
+  color: #b2b2b2;
+}
+
+main .main-container .content-container .sample-container .code-block-full:nth-of-type(2) {
+  margin-bottom: 30px;
+}
+
+main .main-container .content-container .sample-container .code-block-width {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  background: #fff;
+  border-radius: 3px;
+  white-space: nowrap;
+  margin-bottom: 30px;
+}
+
+main .main-container .content-container .sample-container .code-block-width:nth-of-type(5) {
+  margin-bottom: 60px;
+}
+
+main .main-container .content-container .sample-container .code-block-width .tag {
+  color: #c71212;
+}
+
+main .main-container .content-container .sample-container .code-block-width .attr-name {
+  color: #0041bc;
+}
+
+main .main-container .content-container .sample-container .code-block-width .attr-value {
+  color: #b71212;
+}
+
+main .main-container .content-container .sample-container .code-block-width .comments {
+  color: #b2b2b2;
+}
+
+footer {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #B71212;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer a {
+  display: inline-block;
+  margin-left: 5px;
+  text-decoration: none;
+  border-bottom: 2px solid grey;
+  padding: 2px 0;
+}
+
+@media screen and (max-width: 1002px) {
+  main .main-container {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main .main-container {
+    padding: 0 20px;
+  }
+  main .main-container .header-button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100% !important;
+  }
+  main .main-container .header-button button {
+    max-width: none;
+    width: 100%;
+  }
+  main .main-container .header-button button.github {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  main .main-container .content-container .sample-container .sample-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .main-container .content-container .sample-container .sample-group span.code-block {
+    margin-right: 0;
+    margin-bottom: 20px;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+  main .main-container .content-container .sample-container .code-block {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

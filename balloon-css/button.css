@@ -1,0 +1,989 @@
+:root {
+  --balloon-move: 4px;
+  --balloon-font-size: 12px;
+  --balloon-color: #000;
+}
+
+button {
+  position: relative;
+  background-color: #b71212;
+  max-width: 180px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 12px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[aria-label] {
+  width: 180px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif, 'Fontawesome';
+}
+
+button[aria-label]::after {
+  content: attr(aria-label);
+  font-size: var(--balloon-font-size);
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+  background-color: var(--balloon-color);
+  border-radius: 2px;
+  white-space: nowrap;
+  padding: 6px 12px;
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+}
+
+button[aria-label][data-balloon-pos="up"]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, var(--balloon-move));
+          transform: translate(-50%, var(--balloon-move));
+}
+
+button[aria-label][data-balloon-pos="up"]::after {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 10px;
+  -webkit-transform: translate(-50%, var(--balloon-move));
+          transform: translate(-50%, var(--balloon-move));
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+button[aria-label][data-balloon-pos="up"]:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-pos="up"]:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-pos="up"]:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-pos="up"]:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-pos="up"]:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-pos="up"]:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-pos="up-left"]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  bottom: 100%;
+  left: 0;
+  -webkit-transform: translate(50%, var(--balloon-move));
+          transform: translate(50%, var(--balloon-move));
+}
+
+button[aria-label][data-balloon-pos="up-left"]::after {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 10px;
+  -webkit-transform: translate(0, var(--balloon-move));
+          transform: translate(0, var(--balloon-move));
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+button[aria-label][data-balloon-pos="up-left"]:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+button[aria-label][data-balloon-pos="up-left"]:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+button[aria-label][data-balloon-pos="up-left"]:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(50%, 3px);
+          transform: translate(50%, 3px);
+}
+
+button[aria-label][data-balloon-pos="up-left"]:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(0, 3px);
+          transform: translate(0, 3px);
+}
+
+button[aria-label][data-balloon-pos="up-left"]:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+button[aria-label][data-balloon-pos="up-left"]:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+button[aria-label][data-balloon-pos="up-right"]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  bottom: 100%;
+  left: 100%;
+  -webkit-transform: translate(-150%, var(--balloon-move));
+          transform: translate(-150%, var(--balloon-move));
+}
+
+button[aria-label][data-balloon-pos="up-right"]::after {
+  bottom: 100%;
+  left: 100%;
+  margin-bottom: 10px;
+  -webkit-transform: translate(-100%, var(--balloon-move));
+          transform: translate(-100%, var(--balloon-move));
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+button[aria-label][data-balloon-pos="up-right"]:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-150%, 0);
+          transform: translate(-150%, 0);
+}
+
+button[aria-label][data-balloon-pos="up-right"]:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+button[aria-label][data-balloon-pos="up-right"]:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(-150%, 3px);
+          transform: translate(-150%, 3px);
+}
+
+button[aria-label][data-balloon-pos="up-right"]:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-100%, 3px);
+          transform: translate(-100%, 3px);
+}
+
+button[aria-label][data-balloon-pos="up-right"]:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-150%, 0);
+          transform: translate(-150%, 0);
+}
+
+button[aria-label][data-balloon-pos="up-right"]:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+button[aria-label][data-balloon-pos="left"]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  top: 50%;
+  right: 100%;
+  -webkit-transform: translate(var(--balloon-move), -50%);
+          transform: translate(var(--balloon-move), -50%);
+}
+
+button[aria-label][data-balloon-pos="left"]::after {
+  top: 50%;
+  right: 100%;
+  margin-right: 10px;
+  -webkit-transform: translate(var(--balloon-move), -50%);
+          transform: translate(var(--balloon-move), -50%);
+}
+
+button[aria-label][data-balloon-pos="left"]:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+button[aria-label][data-balloon-pos="left"]:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+button[aria-label][data-balloon-pos="left"]:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(3px, -50%);
+          transform: translate(3px, -50%);
+}
+
+button[aria-label][data-balloon-pos="left"]:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(3px, -50%);
+          transform: translate(3px, -50%);
+}
+
+button[aria-label][data-balloon-pos="left"]:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+button[aria-label][data-balloon-pos="left"]:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+button[aria-label][data-balloon-pos="right"]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-right-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translate(calc(var(--balloon-move) * -1), -50%);
+          transform: translate(calc(var(--balloon-move) * -1), -50%);
+}
+
+button[aria-label][data-balloon-pos="right"]::after {
+  top: 50%;
+  left: 100%;
+  margin-left: 10px;
+  -webkit-transform: translate(calc(var(--balloon-move) * -1), -50%);
+          transform: translate(calc(var(--balloon-move) * -1), -50%);
+}
+
+button[aria-label][data-balloon-pos="right"]:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+button[aria-label][data-balloon-pos="right"]:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+button[aria-label][data-balloon-pos="right"]:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(-3px, -50%);
+          transform: translate(-3px, -50%);
+}
+
+button[aria-label][data-balloon-pos="right"]:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-3px, -50%);
+          transform: translate(-3px, -50%);
+}
+
+button[aria-label][data-balloon-pos="right"]:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+button[aria-label][data-balloon-pos="right"]:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+button[aria-label][data-balloon-pos="down"]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) * -1));
+          transform: translate(-50%, calc(var(--balloon-move) * -1));
+}
+
+button[aria-label][data-balloon-pos="down"]::after {
+  top: 100%;
+  left: 50%;
+  margin-top: 10px;
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) * -1));
+          transform: translate(-50%, calc(var(--balloon-move) * -1));
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+button[aria-label][data-balloon-pos="down"]:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-pos="down"]:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-pos="down"]:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -3px);
+          transform: translate(-50%, -3px);
+}
+
+button[aria-label][data-balloon-pos="down"]:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -3px);
+          transform: translate(-50%, -3px);
+}
+
+button[aria-label][data-balloon-pos="down"]:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-pos="down"]:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-pos="down-left"]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  top: 100%;
+  left: 0;
+  -webkit-transform: translate(50%, calc(var(--balloon-move) * -1));
+          transform: translate(50%, calc(var(--balloon-move) * -1));
+}
+
+button[aria-label][data-balloon-pos="down-left"]::after {
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  -webkit-transform: translate(0, calc(var(--balloon-move) * -1));
+          transform: translate(0, calc(var(--balloon-move) * -1));
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+button[aria-label][data-balloon-pos="down-left"]:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+button[aria-label][data-balloon-pos="down-left"]:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+button[aria-label][data-balloon-pos="down-left"]:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(0, -3px);
+          transform: translate(0, -3px);
+}
+
+button[aria-label][data-balloon-pos="down-left"]:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(0, -3px);
+          transform: translate(0, -3px);
+}
+
+button[aria-label][data-balloon-pos="down-left"]:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+button[aria-label][data-balloon-pos="down-left"]:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+button[aria-label][data-balloon-pos="down-right"]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  top: 100%;
+  left: 100%;
+  -webkit-transform: translate(-150%, calc(var(--balloon-move) * -1));
+          transform: translate(-150%, calc(var(--balloon-move) * -1));
+}
+
+button[aria-label][data-balloon-pos="down-right"]::after {
+  top: 100%;
+  left: 100%;
+  margin-top: 10px;
+  -webkit-transform: translate(-100%, calc(var(--balloon-move) * -1));
+          transform: translate(-100%, calc(var(--balloon-move) * -1));
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+button[aria-label][data-balloon-pos="down-right"]:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-150%, 0);
+          transform: translate(-150%, 0);
+}
+
+button[aria-label][data-balloon-pos="down-right"]:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+button[aria-label][data-balloon-pos="down-right"]:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(-150%, -3px);
+          transform: translate(-150%, -3px);
+}
+
+button[aria-label][data-balloon-pos="down-right"]:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-100%, -3px);
+          transform: translate(-100%, -3px);
+}
+
+button[aria-label][data-balloon-pos="down-right"]:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-150%, 0);
+          transform: translate(-150%, 0);
+}
+
+button[aria-label][data-balloon-pos="down-right"]:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+button[aria-label][data-balloon-length="small"]::after {
+  white-space: normal;
+  width: 80px;
+}
+
+button[aria-label][data-balloon-length="medium"]::after {
+  white-space: normal;
+  width: 180px;
+  visibility: collapse;
+  -webkit-transition: visibility none;
+  transition: visibility none;
+}
+
+button[aria-label][data-balloon-length="medium"]:hover::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="medium"]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="medium"]:focus::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-length="medium"]:focus::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-length="medium"]:focus:hover::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="medium"]:focus:hover::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="large"]::after {
+  white-space: normal;
+  width: 280px;
+  visibility: collapse;
+  -webkit-transition: visibility none;
+  transition: visibility none;
+}
+
+button[aria-label][data-balloon-length="large"]:hover::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="large"]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="large"]:focus::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-length="large"]:focus::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-length="large"]:focus:hover::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="large"]:focus:hover::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="xlarge"]::after {
+  white-space: normal;
+  width: 380px;
+  visibility: collapse;
+  -webkit-transition: visibility none;
+  transition: visibility none;
+}
+
+button[aria-label][data-balloon-length="xlarge"]:hover::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="xlarge"]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="xlarge"]:focus::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-length="xlarge"]:focus::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-length="xlarge"]:focus:hover::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="xlarge"]:focus:hover::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="fit"]::after {
+  white-space: normal;
+  width: 100%;
+  visibility: collapse;
+  -webkit-transition: visibility none;
+  transition: visibility none;
+}
+
+button[aria-label][data-balloon-length="fit"]:hover::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="fit"]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="fit"]:focus::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-length="fit"]:focus::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label][data-balloon-length="fit"]:focus:hover::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-length="fit"]:focus:hover::after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-blunt]::before {
+  -webkit-transition: none;
+  transition: none;
+}
+
+button[aria-label][data-balloon-blunt]::after {
+  -webkit-transition: none;
+  transition: none;
+}
+
+button[aria-label][data-balloon-visible]::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-visible]::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-visible]:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label][data-balloon-visible]:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-red {
+  --balloon-color: red;
+}
+
+button[aria-label].tooltip-red::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, var(--balloon-move));
+          transform: translate(-50%, var(--balloon-move));
+}
+
+button[aria-label].tooltip-red::after {
+  bottom: 100%;
+  left: 50%;
+  background-color: var(--balloon-color);
+  margin-bottom: 10px;
+  -webkit-transform: translate(-50%, var(--balloon-move));
+          transform: translate(-50%, var(--balloon-move));
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+button[aria-label].tooltip-red:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-red:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-red:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label].tooltip-red:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label].tooltip-red:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-red:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-big-text {
+  --balloon-font-size: 20px;
+}
+
+button[aria-label].tooltip-big-text::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, var(--balloon-move));
+          transform: translate(-50%, var(--balloon-move));
+}
+
+button[aria-label].tooltip-big-text::after {
+  bottom: 100%;
+  left: 50%;
+  font-size: var(--balloon-font-size);
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  -webkit-transform: translate(-50%, var(--balloon-move));
+          transform: translate(-50%, var(--balloon-move));
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+button[aria-label].tooltip-big-text:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-big-text:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-big-text:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label].tooltip-big-text:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label].tooltip-big-text:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-big-text:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-slide {
+  --balloon-move: 30px;
+}
+
+button[aria-label].tooltip-slide::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: var(--balloon-color);
+  position: absolute;
+  -webkit-transition: all 200ms ease-out 200ms;
+  transition: all 200ms ease-out 200ms;
+  opacity: 0;
+  z-index: 50;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, var(--balloon-move));
+          transform: translate(-50%, var(--balloon-move));
+}
+
+button[aria-label].tooltip-slide::after {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 10px;
+  -webkit-transform: translate(-50%, var(--balloon-move));
+          transform: translate(-50%, var(--balloon-move));
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+button[aria-label].tooltip-slide:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-slide:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-slide:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label].tooltip-slide:focus::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+button[aria-label].tooltip-slide:focus:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+button[aria-label].tooltip-slide:focus:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+/*# sourceMappingURL=button.css.map */

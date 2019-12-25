@@ -1,75 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <style>
-      div.header-button {
-        display: inline-block;
-        height: auto;
-        width: auto;
-        font-size: 88px;
-        line-height: 58px;
-        position: absolute;
-        right: 500px;
-        top: 0;
-      }
-      div.header-button.button-01 {
-        right: 800px;
-      }
-      div.header-button.hovered {
-        color: red;
-      }
-      div.header-button.button-02.hovered {
-        animation: 0.001s forwards paused out;
-      }
-      .button-01.hovered {
-        animation: 0.001s forwards paused in;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    div.header-button {
+      display: inline-block;
+      height: auto;
+      width: auto;
+      font-size: 88px;
+      line-height: 58px;
+      position: absolute;
+      right: 500px;
+      top: 0;
+    }
+
+    div.header-button.button-01 {
+      right: 800px;
+    }
+
+    div.header-button.hovered {
+      color: red;
+    }
+
+    div.header-button.button-02.hovered {
+      animation: 0.001s forwards paused out;
+    }
+
+    .button-01.hovered {
+      animation: 0.001s forwards paused in;
+    }
+
+    .button-01.unhover:hover~.button-01.hovered {
+      animation-name: out;
+      animation-play-state: running;
+    }
+
+    .button-01.unhover:hover~.button-02.hovered {
+      animation-name: in;
+      animation-play-state: running;
+    }
+
+    .button-02.unhover:hover~.button-02.hovered {
+      animation-name: out;
+      animation-play-state: running;
+    }
+
+    .button-02.unhover:hover~.button-01.hovered {
+      animation-name: in;
+      animation-play-state: running;
+    }
+
+    @keyframes out {
+      0% {
+        z-index: -1;
       }
 
-      .button-01.unhover:hover ~ .button-01.hovered {
-        animation-name: out;
-        animation-play-state: running;
+      100% {
+        z-index: 99;
+      }
+    }
+
+    @keyframes in {
+      0% {
+        z-index: 99;
       }
 
-      .button-01.unhover:hover ~ .button-02.hovered {
-        animation-name: in;
-        animation-play-state: running;
+      100% {
+        z-index: -1;
       }
-      .button-02.unhover:hover ~ .button-02.hovered {
-        animation-name: out;
-        animation-play-state: running;
-      }
-      .button-02.unhover:hover ~ .button-01.hovered {
-        animation-name: in;
-        animation-play-state: running;
-      }
+    }
+  </style>
+</head>
 
-      @keyframes out {
-        0% {
-          z-index: -1;
-        }
-        100% {
-          z-index: 99;
-        }
-      }
+<body>
+  <div class="header-button button-01 unhover">1111</div>
+  <div class="header-button button-02 unhover">2222</div>
+  <div class="header-button button-01 hovered">1111</div>
+  <div class="header-button button-02 hovered">2222</div>
 
-      @keyframes in {
-        0% {
-          z-index: 99;
-        }
-        100% {
-          z-index: -1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="header-button button-01 unhover">1111</div>
-    <div class="header-button button-02 unhover">2222</div>
-    <div class="header-button button-01 hovered">1111</div>
-    <div class="header-button button-02 hovered">2222</div>
-  </body>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css">
+
+
+  <span class="tag">&#x3C;button </span>
+  <span class="attr-name">aria-label</span>
+  <span class="attr-value">=&#x22;HTML special characters: &#x26;#9787; &#x26;#9986;
+    &#x26;#9820;&#x22;
+  </span>
+  <span class="attr-name">data-balloon-pos</span>
+  <span class="attr-value">=&#x22;up&#x22;</span>
+  <span class="tag">&#x3E;</span>Hover me!
+  <span class="tag">&#x3C;/button&#x3E;</span>
+</body>
+
+
+
 </html>

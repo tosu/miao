@@ -40,7 +40,6 @@
         position: absolute;
         width: 125px;
         height: 125px;
-        border: 1px solid white;
         background-color: #999;
         opacity: 1;
       }
@@ -55,73 +54,91 @@
         font-size: 50px;
       }
       #shape .ft {
-        background: conic-gradient(
+        /* background: conic-gradient(
           from 45deg,
           white,
           yellow,
           red,
           magenta,
           white
-        );
+        ); */
+        background: linear-gradient(-45deg, yellow, magenta),
+          linear-gradient(-135deg, white, red);
+        background-blend-mode: screen;
         transform: translateZ(63px);
       }
       #shape .rt {
-        background: conic-gradient(
+        /* background: conic-gradient(
           from 45deg,
           cyan,
           green,
           yellow,
           white,
           cyan
-        );
+        ); */
+        background: linear-gradient(-45deg, green, white),
+          linear-gradient(-135deg, cyan, yellow);
+        background-blend-mode: screen;
         transform: rotateY(90deg) translateZ(63px);
       }
       #shape .bk {
-        background: conic-gradient(from -45deg, cyan, green, black, blue, cyan);
+        /* background: conic-gradient(from -45deg, cyan, green, black, blue, cyan); */
+        background: linear-gradient(45deg, green, blue),
+          linear-gradient(135deg, cyan, black);
+        background-blend-mode: screen;
         transform: rotateY(180deg) translateZ(63px);
       }
       #shape .lt {
-        background: conic-gradient(
+        /* background: conic-gradient(
           from -45deg,
           blue,
           magenta,
           red,
           black,
           blue
-        );
+        ); */
+        background: linear-gradient(135deg, blue, red),
+          linear-gradient(-135deg, magenta, black);
+        background-blend-mode: screen;
         transform: rotateY(270deg) translateZ(63px);
       }
       #shape .tp {
-        background: conic-gradient(
+        /* background: conic-gradient(
           from -45deg,
           blue,
           cyan,
           white,
           magenta,
           blue
-        );
+        ); */
+        background: linear-gradient(135deg, blue, white),
+          linear-gradient(-135deg, cyan, magenta);
+        background-blend-mode: screen;
         transform: rotateX(90deg) translateZ(63px);
       }
       #shape .bm {
-        background: conic-gradient(
+        /* background: conic-gradient(
           from -135deg,
           black,
           red,
           yellow,
           green,
           black
-        );
+        ); */
+        background: linear-gradient(45deg, black, yellow),
+          linear-gradient(-45deg, green, red);
+        background-blend-mode: screen;
         transform: rotateX(270deg) rotateY(0deg) translateZ(63px);
       }
 
       /*Animation*/
       @keyframes spin {
         to {
-          transform: rotateX(360deg) rotateY(360deg);
+          transform: rotateX(540deg) rotateY(540deg);
         }
       }
       #shape {
-        animation: spin 5s infinite linear;
+        animation: spin 10s infinite ease-in-out alternate;
       }
     </style>
   </head>

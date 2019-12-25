@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image Panel</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      .main {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #ddd;
+        background-color: white;
+        width: 1200px;
+        height: 800px;
+        margin: 10px auto;
+        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+      }
+      .container {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 800px;
+        height: 400px;
+        margin: 100px auto;
+        overflow: hidden;
+      }
+      .img-group-01 {
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .img-group-02 {
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 200px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .img-group-03 {
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 400px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .img-group-04 {
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 600px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .img-group-01 > span,
+      .img-group-03 > span {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 400px;
+        z-index: 10;
+      }
+      .img-group-02 > span,
+      .img-group-04 > span {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -400px;
+        z-index: 10;
+      }
+      input {
+        display: none;
+      }
+      label.button-img-01 {
+        position: absolute;
+        left: 75px;
+        bottom: 50px;
+      }
+      label.button-img-02 {
+        position: absolute;
+        left: 275px;
+        bottom: 50px;
+      }
+      label.button-img-03 {
+        position: absolute;
+        left: 475px;
+        bottom: 50px;
+      }
+      label.button-img-04 {
+        position: absolute;
+        left: 675px;
+        bottom: 50px;
+      }
+      label {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: hsla(354, 100%, 90%, 0.6);
+        text-align: center;
+        line-height: 50px;
+        z-index: 98;
+        cursor: pointer;
+      }
+      div.checked {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+        box-shadow: 0 6px 12px hsla(180, 2%, 28%, 0.6);
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        z-index: 99;
+        transition: all 600ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      /* Checked button animation */
+      input.button-img-01:checked ~ div.checked {
+        left: 75px;
+      }
+      input.button-img-02:checked ~ div.checked {
+        left: 275px;
+      }
+      input.button-img-03:checked ~ div.checked {
+        left: 475px;
+      }
+      input.button-img-04:checked ~ div.checked {
+        left: 675px;
+      }
+      input.button-img-01:checked ~ label.button-img-01 {
+        opacity: 0;
+        transition-delay: 600ms;
+      }
+      input.button-img-02:checked ~ label.button-img-02 {
+        opacity: 0;
+        transition-delay: 600ms;
+      }
+      input.button-img-03:checked ~ label.button-img-03 {
+        opacity: 0;
+        transition-delay: 600ms;
+      }
+      input.button-img-04:checked ~ label.button-img-04 {
+        opacity: 0;
+        transition-delay: 600ms;
+      }
+      input.button-img-01:checked ~ div.checked {
+        background-color: hsla(351, 71%, 70%, 0.86);
+      }
+      input.button-img-02:checked ~ div.checked {
+        background-color: hsla(144, 36%, 71%, 0.86);
+      }
+      input.button-img-03:checked ~ div.checked {
+        background-color: hsla(211, 74%, 47%, 0.86);
+      }
+      input.button-img-04:checked ~ div.checked {
+        background-color: hsla(217, 44%, 96%, 0.86);
+      }
+      input.button-img-01:checked ~ label {
+        background-color: hsla(41, 37%, 56%, 0.6);
+        transition: 200ms;
+      }
+      input.button-img-02:checked ~ label {
+        background-color: hsla(212, 100%, 92%, 0.6);
+        transition: 200ms;
+      }
+      input.button-img-03:checked ~ label {
+        background-color: hsla(91, 49%, 53%, 0.6);
+        transition: 200ms;
+      }
+      input.button-img-04:checked ~ label {
+        background-color: hsla(354, 87%, 49%, 0.6);
+        transition: 200ms;
+      }
+      /* Image background setting */
+      .img-box > div > span:nth-of-type(1) {
+        background-image: url(animated-slider/01.jpg);
+        background-size: cover;
+      }
+      .img-box > div > span:nth-of-type(2) {
+        background-image: url(animated-slider/02.jpg);
+        background-size: cover;
+      }
+      .img-box > div > span:nth-of-type(3) {
+        background-image: url(animated-slider/03.jpg);
+        background-size: cover;
+      }
+      .img-box > div > span:nth-of-type(4) {
+        background-image: url(animated-slider/04.jpg);
+        background-size: cover;
+      }
+      .img-group-01 > span {
+        background-position: top 0 left 0;
+      }
+      .img-group-02 > span {
+        background-position: top 0 left -200px;
+      }
+      .img-group-03 > span {
+        background-position: top 0 left -400px;
+      }
+      .img-group-04 > span {
+        background-position: top 0 left -600px;
+      }
+      /* Image animation */
+      @keyframes up {
+        from {
+          top: 0;
+        }
+        to {
+          top: -400px;
+        }
+      }
+      @keyframes down {
+        from {
+          top: 0;
+        }
+        to {
+          top: 400px;
+        }
+      }
+      input:checked ~ .img-box > div:nth-child(2n + 1) span {
+        animation-name: up;
+        animation-duration: 600ms;
+        animation-timing-function: ease;
+        z-index: 10;
+      }
+      input:checked ~ .img-box > div:nth-child(2n) span {
+        animation-name: down;
+        animation-duration: 600ms;
+        animation-timing-function: ease;
+        z-index: 10;
+      }
+      input.button-img-01:checked ~ .img-box div span.img-01,
+      input.button-img-02:checked ~ .img-box div span.img-02,
+      input.button-img-03:checked ~ .img-box div span.img-03,
+      input.button-img-04:checked ~ .img-box div span.img-04 {
+        transition: 600ms ease;
+        top: 0;
+        z-index: 80;
+        opacity: 1;
+        animation: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <input
+          type="radio"
+          name="radio-button"
+          id="img-01"
+          class="button-img-01"
+          checked
+        />
+        <input
+          type="radio"
+          name="radio-button"
+          id="img-02"
+          class="button-img-02"
+        />
+        <input
+          type="radio"
+          name="radio-button"
+          id="img-03"
+          class="button-img-03"
+        />
+        <input
+          type="radio"
+          name="radio-button"
+          id="img-04"
+          class="button-img-04"
+        />
+        <label for="img-01" class="button-img-01"></label>
+        <label for="img-02" class="button-img-02"></label>
+        <label for="img-03" class="button-img-03"></label>
+        <label for="img-04" class="button-img-04"></label>
+        <div class="checked"></div>
+        <div class="img-box">
+          <div class="img-group-01">
+            <span class="img-clip img-01"></span>
+            <span class="img-clip img-02"></span>
+            <span class="img-clip img-03"></span>
+            <span class="img-clip img-04"></span>
+          </div>
+          <div class="img-group-02">
+            <span class="img-clip img-01"></span>
+            <span class="img-clip img-02"></span>
+            <span class="img-clip img-03"></span>
+            <span class="img-clip img-04"></span>
+          </div>
+          <div class="img-group-03">
+            <span class="img-clip img-01"></span>
+            <span class="img-clip img-02"></span>
+            <span class="img-clip img-03"></span>
+            <span class="img-clip img-04"></span>
+          </div>
+          <div class="img-group-04">
+            <span class="img-clip img-01"></span>
+            <span class="img-clip img-02"></span>
+            <span class="img-clip img-03"></span>
+            <span class="img-clip img-04"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

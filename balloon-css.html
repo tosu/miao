@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Balloon.css — CSS tooltips for HTML elements</title>
+    <link rel="stylesheet" href="src/normalize.css" />
+    <link rel="stylesheet" href="balloon-css/main.css" />
+    <link rel="stylesheet" href="balloon-css/button.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="main-container">
+            <div class="header-container">
+                <img src="balloon-css/logo.svg" alt="" class="logo" />
+                <h1 class="header-title">
+                    Simple tooltips made of
+                    <span>pure CSS</span>
+                    .
+                </h1>
+                <div class="header-button">
+                    <button class="github">Github Project</button>
+                    <button class="download">Download CSS</button>
+                </div>
+                <p class="header-text">
+                    Balloon.css lets you add tooltips to elements<span>without JavaScript</span>and in just a few lines
+                    of CSS. See how easy it is:
+                </p>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="content-container">
+                <h2>Positioning</h2>
+                <p class="content-text">
+                    For positioning, use<span class="code-span">data-balloon-pos</span>
+                    attribute with one of the values:
+                </p>
+                <p class="content-text">
+                    <span class="code-span">up</span>,
+                    <span class="code-span">down</span>,
+                    <span class="code-span">left</span>,
+                    <span class="code-span">right</span>,
+                    <span class="code-span">up-left</span>,
+                    <span class="code-span">up-right</span>,
+                    <span class="code-span">down-left</span> or
+                    <span class="code-span">down-right</span>.
+                </p>
+                <div class="sample-container">
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-name">data-balloon-length</span><span class="attr-value">=&#x22;Whats
+                                up!&#x22; </span><span class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>Hover me!<span
+                                class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="Whats up!" data-balloon-pos="up">
+                            Hover me!
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;Whats up!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;left&#x22;</span><span class="tag">&#x3E;</span>Hover me!<span
+                                class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="Whats up!" data-balloon-pos="left">
+                            Hover me!
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;Whats up!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;right&#x22;</span><span class="tag">&#x3E;</span>Hover
+                            me!<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="Whats up!" data-balloon-pos="right">
+                            Hover me!
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;Whats up!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;down&#x22;</span><span class="tag">&#x3E;</span>Hover me!<span
+                                class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="Whats up!" data-balloon-pos="down">
+                            Hover me!
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;Whats up!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up-left&#x22;</span><span class="tag">&#x3E;</span>Hover
+                            me!<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="Whats up!" data-balloon-pos="up-left">
+                            Hover me!
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;Whats up!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up-right&#x22;</span><span class="tag">&#x3E;</span>Hover
+                            me!<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="Whats up!" data-balloon-pos="up-right">
+                            Hover me!
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;Whats up!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;down-left&#x22;</span><span class="tag">&#x3E;</span>Hover
+                            me!<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="Whats up!" data-balloon-pos="down-left">
+                            Hover me!
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;Whats up!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;down-right&#x22;</span><span class="tag">&#x3E;</span>Hover
+                            me!<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="Whats up!" data-balloon-pos="down-right">
+                            Hover me!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="content-container">
+                <h2>Length</h2>
+                <p class="content-text">
+                    By default, tooltips will always remain single-line no matter their
+                    length. You can change this behavior by using the
+                    attribute
+                    <span class="code-span">data-balloon-length</span>
+                    with one of the values:
+                    <span class="code-span">small</span>,
+                    <span class="code-span">medium</span>,
+                    <span class="code-span">large</span> or
+                    <span class="code-span">fit</span>.
+                </p>
+                <div class="sample-container">
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span
+                                class="attr-name">data-balloon-length</span><span class="attr-value">=&#x22;small&#x22;
+                            </span><span class="attr-name">aria-label</span><span class="attr-value">=&#x22;Hi.&#x22;
+                            </span><span class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>I'm a small
+                            tooltip.<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button data-balloon-length="small" aria-label="Hi." data-balloon-pos="up">
+                            Hover me!
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span
+                                class="attr-name">data-balloon-length</span><span class="attr-value">=&#x22;medium&#x22;
+                            </span><span class="attr-name">aria-label</span><span class="attr-value">=&#x22;Now that's a
+                                super big text we have over here right?
+                                Lorem ipsum dolor sit I'm done.&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>I'm a medium
+                            tooltip.<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button data-balloon-length="medium"
+                            aria-label="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done."
+                            data-balloon-pos="up">
+                            I'm a medium tooltip.
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span
+                                class="attr-name">data-balloon-length</span><span class="attr-value">=&#x22;large&#x22;
+                            </span><span class="attr-name">aria-label</span><span class="attr-value">=&#x22;What about
+                                something really big? This may surpass your
+                                window dimensions. Imagine you're on that boring class with
+                                that boring teacher and you didn't slept so well last night.
+                                Suddenly you're sleeping in class. Can you believe it?!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>I'm a large
+                            tooltip<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button data-balloon-length="large"
+                            aria-label="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!"
+                            data-balloon-pos="up">
+                            I'm a large tooltip
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span
+                                class="attr-name">data-balloon-length</span><span class="attr-value">=&#x22;xlarge&#x22;
+                            </span><span class="attr-name">aria-label</span><span class="attr-value">=&#x22;What about
+                                something really big? This may surpass your
+                                window dimensions. Imagine you're on that boring class with
+                                that boring teacher and you didn't slept so well last night.
+                                Suddenly you're sleeping in class. Can you believe it?!!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>I'm a Xlarge
+                            tooltip<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button data-balloon-length="xlarge"
+                            aria-label="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!"
+                            data-balloon-pos="up">
+                            I'm a Xlarge tooltip
+                        </button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span
+                                class="attr-name">data-balloon-length</span><span class="attr-value">=&#x22;fit&#x22;
+                            </span><span class="attr-name">aria-label</span><span class="attr-value">=&#x22;What about
+                                something really big? This may surpass your
+                                window dimensions. Imagine you're on that boring class with
+                                that boring teacher and you didn't slept so well last night.
+                                Suddenly you're sleeping in class. Can you believe it?!&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>My width will
+                            fit to
+                            element<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button data-balloon-length="fit"
+                            aria-label="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!"
+                            data-balloon-pos="up">
+                            My width will fit to element
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="content-container">
+                <h2>Disabling animation</h2>
+                <p class="content-text">
+                    If for some reason you do not want animations in your tooltips, you can use the
+                    <span class="code-span">data-balloon-blunt</span>
+                    attribute for that.
+                </p>
+                <div class="sample-container">
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span>
+                            <span class="attr-name">data-balloon-blunt</span>
+                            <span class="attr-name">aria-label</span><span class="attr-value">=&#x22;No animation!&#x22;
+                            </span>
+                            <span class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>Hover me!<span
+                                class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button data-balloon-blunt aria-label="No animation!" data-balloon-pos="up">No
+                            animation!</button>
+                    </div>
+                </div>
+                <div class="footer-container"></div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="content-container">
+                <h2>Showing tooltips programatically
+                </h2>
+                <p class="content-text">
+                    If you want to show tooltips even when user interaction isn't happening, you can simply use the
+                    <span class="code-span">data-balloon-visible</span>
+                    attribute:
+                </p>
+                <div class="sample-container">
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">data-balloon-visible</span>
+                            <span class="attr-name">aria-label</span><span class="attr-value">=&#x22;No animation!&#x22;
+                            </span><span class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>No
+                            animation!<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button data-balloon-visible aria-label="I am always visible!" data-balloon-pos="up">Always
+                            visible!</button>
+                    </div>
+                    <p class="content-text">
+                        The attribute
+                        <span class="code-span">data-balloon-visible</span>
+                        can be easily added via JavaScript (e.g.
+                        <span class="code-span">.setAttribute()</span>
+                        ), enabling you to show tooltips whenever needed.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="content-container">
+                <h2>Customizing Tooltips
+                </h2>
+                <p class="content-text">
+                    Balloon.css exposes three CSS variables to make it easier to customize tooltips:
+                    <span class="code-span">--balloon-color</span>
+                    <span class="code-span">--balloon-font-size</span>
+                    and
+                    <span class="code-span">--balloon-move</span>.
+                    This way you can use custom CSS to make your own tooltip styles:
+                </p>
+                <div class="sample-container">
+                    <pre class="code-block-full">
+<span class="comments">/* Add this to your CSS */</span>
+<span class="attr-name">.tooltip-red {</span>
+<span class="attr-value">  --balloon-color</span><span class="attr-name"></span>:</span>red<span class="attr-name">;</span>
+<span class="attr-name">}</span>
+
+<span class="attr-name">.tooltip-big-text {</span>
+<span class="attr-value">  --balloon-font-size</span><span class="attr-name"></span>:</span>20px<span class="attr-name">;</span>
+<span class="attr-name">}</span>
+
+<span class="attr-name">.tooltip-slide {</span>
+<span class="attr-value">  --balloon-move</span><span class="attr-name"></span>:</span>30px<span class="attr-name">;</span>
+<span class="attr-name">}</span></pre>
+                    <div class="sample-group">
+                        </span>
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;I am red!&#x22;
+                            </span><span class="attr-name">class</span><span
+                                class="attr-value">=&#x22;tooltip-red&#x22;</span><span class="tag">&#x3E;</span>I am
+                            red!<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="I am red!" class="tooltip-red">I am red!</button>
+                    </div>
+                    <div class="sample-group">
+                        </span>
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;I have big text!&#x22;
+                            </span><span class="attr-name">class</span><span
+                                class="attr-value">=&#x22;tooltip-big-text&#x22;</span><span class="tag">&#x3E;</span>I
+                            have big text!<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="I have big text!" class="tooltip-big-text">I have big text!</button>
+                    </div>
+                    <div class="sample-group">
+                        </span>
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;I move a lot!&#x22;
+                            </span><span class="attr-name">class</span><span
+                                class="attr-value">=&#x22;tooltip-slide&#x22;</span><span class="tag">&#x3E;</span>I
+                            move a lot!<span class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="I move a lot!" class="tooltip-slide">I move a lot!</button>
+                    </div>
+
+                    <p class="content-text">
+                        You can combine classes to achieve multiple customization. If you want to customize tooltips
+                        globally, use the
+                        <span class="code-span">:root</span>
+                        selector:
+                    </p>
+                    <pre class="code-block-full">
+<span class="comments">/* Add this to your CSS */</span>
+<span class="attr-name">:root {</span>
+<span class="attr-value">  --balloon-color</span><span class="attr-name"></span>:</span>blue<span class="attr-name">;</span>
+<span class="attr-name">}</span></pre>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="content-container">
+                <h2>Glyphs and Icon Fonts</h2>
+                <p class="content-text">
+                    You can also add any HTML special character to your tooltips, or even use third-party Icon fonts:
+                </p>
+                <div class="sample-container">
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;HTML special characters: &#x26;#9787; &#x26;#9986;
+                                &#x26;#9820;&#x22;
+                            </span><span class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>Hover me!<span
+                                class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="HTML special characters: &#9787; &#9986; &#9820;"
+                            data-balloon-pos="up">Hover me!</button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">aria-label</span><span
+                                class="attr-value">=&#x22;Emojis: 😀 😬 😁 😂 😃 😄 😅 😆&#x22; </span><span
+                                class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>Hover me!<span
+                                class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button aria-label="Emojis: 😀 😬 😁 😂 😃 😄 😅 😆" data-balloon-pos="up">Hover me!</button>
+                    </div>
+                    <div class="sample-group">
+                        <span class="code-block">
+                            <span class="tag">&#x3C;button </span><span class="attr-name">class</span><span
+                                class="attr-value">=&#x22;font-awesome&#x22;
+                            </span><span class="attr-name">aria-label</span><span class="attr-value">=&#x22;Font
+                                Awesome: &#x26;#xf030; &#x26;#xf133; &#x26;#xf1fc; &#x26;#xf03e; &#x26;#xf1f8;
+                            </span><span class="attr-name">data-balloon-pos</span><span
+                                class="attr-value">=&#x22;up&#x22;</span><span class="tag">&#x3E;</span>Hover me!<span
+                                class="tag">&#x3C;/button&#x3E;</span>
+                        </span>
+                        <button class="font-awesome"
+                            aria-label="Font Awesome: &#xf030; &#xf133; &#xf1fc; &#xf03e; &#xf1f8;"
+                            data-balloon-pos="up">Hover me!</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="content-container">
+                <h2>How to use</h2>
+                <div class="sample-container">
+                    <p class="content-text">
+                        You can import the CSS using a CDN:
+                    </p>
+                    <span class="code-block-width">
+                        <span class="attr-value">&#x3C;link rel</span><span
+                            class="attr-name">=&#x22;stylesheet&#x22;</span>
+                        <span class="attr-value">href</span><span
+                            class="attr-name">=&#x22;https://unpkg.com/balloon-css/balloon.min.css&#x22;</span><span
+                            class="attr-value">&#x3E;</span>
+                    </span>
+                    <p class="content-text">
+                        Or download it in GitHub and load it locally:
+                    </p>
+                    <span class="code-block-width">
+                        <span class="attr-value">&#x3C;link rel</span><span
+                            class="attr-name">=&#x22;stylesheet&#x22;</span>
+                        <span class="attr-value">href</span><span
+                            class="attr-name">=&#x22;your/assets/balloon.min.css&#x22;</span><span
+                            class="attr-value">&#x3E;</span>
+                    </span>
+                    <p class="content-text">
+                        If you're using npm, simply do:
+                    </p>
+                    <span class="code-block-width">
+                        npm i balloon-css --save
+                    </span>
+                    <p class="content-text">
+                        And then import in your JS file
+                    </p>
+                    <span class="code-block-width">
+                        <span class="attr-value">import</span>
+                        <span class="attr-name">&#x27;balloon-css&#x27;</span>;
+                    </span>
+                    <p class="content-text">
+                        With npm you can also link directly to the SASS/SCSS file if you want to:
+                    </p>
+                    <span class="code-block-width">
+                        <span class="attr-value">import</span>
+                        <span class="attr-name">&#x22;~balloon-css/src/balloon&#x22;</span>;
+                    </span>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="content-container">
+                <h2>Drawbacks
+                </h2>
+                <p class="content-text">
+                    Balloon.css make use of pseudo-elements thus self-closing elements such as
+                    <span class="code-span">&#x3C;img&#x3E;</span>,
+                    <span class="code-span">&#x3C;input&#x3E;</span>
+                    and
+                    <span class="code-span">&#x3C;hr&#x3E;</span>
+                    will not render tooltips.
+                </p>
+                <p class="content-text drawbacks">
+                    Also keep in mind that if pseudo elements are already in use on an element, the tooltip will
+                    conflict with them resulting in potential bugs.
+                </p>
+            </div>
+    </main>
+    <footer>
+        Made by Claudio Holanda. Find me at <a href="https://twitter.com/kazzkiq">@kazzkiq</a>
+    </footer>
+
+</body>
+
+</html>
