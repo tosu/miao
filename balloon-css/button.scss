@@ -83,12 +83,12 @@ button {
             &:focus {
                 &::before {
                     opacity: 1;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
 
                 &::after {
                     opacity: 1;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
             }
 
@@ -168,12 +168,12 @@ button {
             &:focus {
                 &::before {
                     opacity: 1;
-                    transform: translate(50%, 3px);
+                    transform: translate(50%, calc(var(--balloon-move) - 1px));
                 }
 
                 &::after {
                     opacity: 1;
-                    transform: translate(0, 3px);
+                    transform: translate(0, calc(var(--balloon-move) - 1px));
                 }
             }
 
@@ -253,12 +253,12 @@ button {
             &:focus {
                 &::before {
                     opacity: 1;
-                    transform: translate(-150%, 3px);
+                    transform: translate(-150%, calc(var(--balloon-move) - 1-px));
                 }
 
                 &::after {
                     opacity: 1;
-                    transform: translate(-100%, 3px);
+                    transform: translate(-100%, calc(var(--balloon-move) - 1-px));
                 }
             }
 
@@ -337,12 +337,12 @@ button {
             &:focus {
                 &::before {
                     opacity: 1;
-                    transform: translate(3px, -50%);
+                    transform: translate(calc(var(--balloon-move) - 1px), -50%);
                 }
 
                 &::after {
                     opacity: 1;
-                    transform: translate(3px, -50%);
+                    transform: translate(calc(var(--balloon-move) - 1px), -50%);
                 }
             }
 
@@ -421,12 +421,12 @@ button {
             &:focus {
                 &::before {
                     opacity: 1;
-                    transform: translate(-3px, -50%);
+                    transform: translate(calc(1px - var(--balloon-move)), -50%);
                 }
 
                 &::after {
                     opacity: 1;
-                    transform: translate(-3px, -50%);
+                    transform: translate(calc(1px - var(--balloon-move)), -50%);
                 }
             }
 
@@ -506,12 +506,12 @@ button {
             &:focus {
                 &::before {
                     opacity: 1;
-                    transform: translate(-50%, -3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
 
                 &::after {
                     opacity: 1;
-                    transform: translate(-50%, -3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
             }
 
@@ -591,12 +591,12 @@ button {
             &:focus {
                 &::before {
                     opacity: 1;
-                    transform: translate(0, -3px);
+                    transform: translate(0, calc(1px - var(--balloon-move)));
                 }
 
                 &::after {
                     opacity: 1;
-                    transform: translate(0, -3px);
+                    transform: translate(0, calc(1px - var(--balloon-move)));
                 }
             }
 
@@ -676,12 +676,12 @@ button {
             &:focus {
                 &::before {
                     opacity: 1;
-                    transform: translate(-150%, -3px);
+                    transform: translate(-150%, calc(1px - var(--balloon-move)));
                 }
 
                 &::after {
                     opacity: 1;
-                    transform: translate(-100%, -3px);
+                    transform: translate(-100%, calc(1px - var(--balloon-move)));
                 }
             }
 
@@ -756,13 +756,13 @@ button {
                 &::before {
                     opacity: 1;
                     visibility: visible;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
 
                 &::after {
                     opacity: 1;
                     visibility: visible;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
             }
 
@@ -807,13 +807,13 @@ button {
                 &::before {
                     opacity: 1;
                     visibility: visible;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
 
                 &::after {
                     opacity: 1;
                     visibility: visible;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
             }
 
@@ -858,13 +858,13 @@ button {
                 &::before {
                     opacity: 1;
                     visibility: visible;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
 
                 &::after {
                     opacity: 1;
                     visibility: visible;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
             }
 
@@ -909,13 +909,13 @@ button {
                 &::before {
                     opacity: 1;
                     visibility: visible;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
 
                 &::after {
                     opacity: 1;
                     visibility: visible;
-                    transform: translate(-50%, 3px);
+                    transform: translate(-50%, calc(var(--balloon-move) - 1px));
                 }
             }
 

@@ -85,14 +85,14 @@ button[aria-label][data-balloon-pos="up"]:hover::after, button[aria-label]:not([
 
 button[aria-label][data-balloon-pos="up"]:focus::before, button[aria-label]:not([data-balloon-pos]):focus::before {
   opacity: 1;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-pos="up"]:focus::after, button[aria-label]:not([data-balloon-pos]):focus::after {
   opacity: 1;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-pos="up"]:focus:hover::before, button[aria-label]:not([data-balloon-pos]):focus:hover::before {
@@ -172,14 +172,14 @@ button[aria-label][data-balloon-pos="up-left"]:hover::after {
 
 button[aria-label][data-balloon-pos="up-left"]:focus::before {
   opacity: 1;
-  -webkit-transform: translate(50%, 3px);
-          transform: translate(50%, 3px);
+  -webkit-transform: translate(50%, calc(var(--balloon-move) - 1px));
+          transform: translate(50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-pos="up-left"]:focus::after {
   opacity: 1;
-  -webkit-transform: translate(0, 3px);
-          transform: translate(0, 3px);
+  -webkit-transform: translate(0, calc(var(--balloon-move) - 1px));
+          transform: translate(0, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-pos="up-left"]:focus:hover::before {
@@ -259,14 +259,14 @@ button[aria-label][data-balloon-pos="up-right"]:hover::after {
 
 button[aria-label][data-balloon-pos="up-right"]:focus::before {
   opacity: 1;
-  -webkit-transform: translate(-150%, 3px);
-          transform: translate(-150%, 3px);
+  -webkit-transform: translate(-150%, calc(var(--balloon-move) - 1-px));
+          transform: translate(-150%, calc(var(--balloon-move) - 1-px));
 }
 
 button[aria-label][data-balloon-pos="up-right"]:focus::after {
   opacity: 1;
-  -webkit-transform: translate(-100%, 3px);
-          transform: translate(-100%, 3px);
+  -webkit-transform: translate(-100%, calc(var(--balloon-move) - 1-px));
+          transform: translate(-100%, calc(var(--balloon-move) - 1-px));
 }
 
 button[aria-label][data-balloon-pos="up-right"]:focus:hover::before {
@@ -344,14 +344,14 @@ button[aria-label][data-balloon-pos="left"]:hover::after {
 
 button[aria-label][data-balloon-pos="left"]:focus::before {
   opacity: 1;
-  -webkit-transform: translate(3px, -50%);
-          transform: translate(3px, -50%);
+  -webkit-transform: translate(calc(var(--balloon-move) - 1px), -50%);
+          transform: translate(calc(var(--balloon-move) - 1px), -50%);
 }
 
 button[aria-label][data-balloon-pos="left"]:focus::after {
   opacity: 1;
-  -webkit-transform: translate(3px, -50%);
-          transform: translate(3px, -50%);
+  -webkit-transform: translate(calc(var(--balloon-move) - 1px), -50%);
+          transform: translate(calc(var(--balloon-move) - 1px), -50%);
 }
 
 button[aria-label][data-balloon-pos="left"]:focus:hover::before {
@@ -429,14 +429,14 @@ button[aria-label][data-balloon-pos="right"]:hover::after {
 
 button[aria-label][data-balloon-pos="right"]:focus::before {
   opacity: 1;
-  -webkit-transform: translate(-3px, -50%);
-          transform: translate(-3px, -50%);
+  -webkit-transform: translate(calc(1px - var(--balloon-move)), -50%);
+          transform: translate(calc(1px - var(--balloon-move)), -50%);
 }
 
 button[aria-label][data-balloon-pos="right"]:focus::after {
   opacity: 1;
-  -webkit-transform: translate(-3px, -50%);
-          transform: translate(-3px, -50%);
+  -webkit-transform: translate(calc(1px - var(--balloon-move)), -50%);
+          transform: translate(calc(1px - var(--balloon-move)), -50%);
 }
 
 button[aria-label][data-balloon-pos="right"]:focus:hover::before {
@@ -516,14 +516,14 @@ button[aria-label][data-balloon-pos="down"]:hover::after {
 
 button[aria-label][data-balloon-pos="down"]:focus::before {
   opacity: 1;
-  -webkit-transform: translate(-50%, -3px);
-          transform: translate(-50%, -3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-pos="down"]:focus::after {
   opacity: 1;
-  -webkit-transform: translate(-50%, -3px);
-          transform: translate(-50%, -3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-pos="down"]:focus:hover::before {
@@ -603,14 +603,14 @@ button[aria-label][data-balloon-pos="down-left"]:hover::after {
 
 button[aria-label][data-balloon-pos="down-left"]:focus::before {
   opacity: 1;
-  -webkit-transform: translate(0, -3px);
-          transform: translate(0, -3px);
+  -webkit-transform: translate(0, calc(1px - var(--balloon-move)));
+          transform: translate(0, calc(1px - var(--balloon-move)));
 }
 
 button[aria-label][data-balloon-pos="down-left"]:focus::after {
   opacity: 1;
-  -webkit-transform: translate(0, -3px);
-          transform: translate(0, -3px);
+  -webkit-transform: translate(0, calc(1px - var(--balloon-move)));
+          transform: translate(0, calc(1px - var(--balloon-move)));
 }
 
 button[aria-label][data-balloon-pos="down-left"]:focus:hover::before {
@@ -690,14 +690,14 @@ button[aria-label][data-balloon-pos="down-right"]:hover::after {
 
 button[aria-label][data-balloon-pos="down-right"]:focus::before {
   opacity: 1;
-  -webkit-transform: translate(-150%, -3px);
-          transform: translate(-150%, -3px);
+  -webkit-transform: translate(-150%, calc(1px - var(--balloon-move)));
+          transform: translate(-150%, calc(1px - var(--balloon-move)));
 }
 
 button[aria-label][data-balloon-pos="down-right"]:focus::after {
   opacity: 1;
-  -webkit-transform: translate(-100%, -3px);
-          transform: translate(-100%, -3px);
+  -webkit-transform: translate(-100%, calc(1px - var(--balloon-move)));
+          transform: translate(-100%, calc(1px - var(--balloon-move)));
 }
 
 button[aria-label][data-balloon-pos="down-right"]:focus:hover::before {
@@ -766,15 +766,15 @@ button[aria-label][data-balloon-length="medium"]:hover::after {
 button[aria-label][data-balloon-length="medium"]:focus::before {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-length="medium"]:focus::after {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-length="medium"]:focus:hover::before {
@@ -816,15 +816,15 @@ button[aria-label][data-balloon-length="large"]:hover::after {
 button[aria-label][data-balloon-length="large"]:focus::before {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-length="large"]:focus::after {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-length="large"]:focus:hover::before {
@@ -866,15 +866,15 @@ button[aria-label][data-balloon-length="xlarge"]:hover::after {
 button[aria-label][data-balloon-length="xlarge"]:focus::before {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-length="xlarge"]:focus::after {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-length="xlarge"]:focus:hover::before {
@@ -916,15 +916,15 @@ button[aria-label][data-balloon-length="fit"]:hover::after {
 button[aria-label][data-balloon-length="fit"]:focus::before {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-length="fit"]:focus::after {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translate(-50%, 3px);
-          transform: translate(-50%, 3px);
+  -webkit-transform: translate(-50%, calc(var(--balloon-move) - 1px));
+          transform: translate(-50%, calc(var(--balloon-move) - 1px));
 }
 
 button[aria-label][data-balloon-length="fit"]:focus:hover::before {
