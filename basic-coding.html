@@ -114,3 +114,169 @@
 <script id="ch0103/20">
     console.log(Math.pow(2, Number(prompt())))
 </script>
+
+<script id="ch0104/01">
+    var posOrNeg = Number(prompt());
+    console.log(posOrNeg > 0 ? ('positive') : (posOrNeg < 0 ? 'negative' : 'zeor'))
+</script>
+<script id="ch0104/02">
+    var absInput = Number(prompt());
+    console.log(Math.abs(absInput).toFixed(2));
+</script>
+<script id="ch0104/03">
+    var oddOrEven = Number(prompt());
+    console.log(oddOrEven % 2 == 0 ? 'even' : 'odd')
+</script>
+<script id="ch0104/04">
+    var asciiOddOrEven = String(prompt());
+    console.log(Number(asciiOddOrEven.charCodeAt(0)) % 2 == 0 ? 'NO' : 'YES')
+</script>
+<script id="ch0104/05">
+    var comX = Number(prompt());
+    var comY = Number(prompt());
+    console.log(comX >= comY ? (comX = comY ? '=' : '>') : '<')
+</script>
+<script id="ch0104/06">
+    console.log(Number(prompt()) / 10 >= 1 ? '1' : 0)
+</script>
+<script id="ch0104/07">
+    var luckCount = Number(prompt());
+    var encoCount = Number(prompt());
+    console.log((luckCount >= 10 || encoCount >= 20) ? '1' : '0')
+</script>
+<script id="ch0104/08">
+    var threeAndFive = Number(prompt());
+    console.log((threeAndFive % 3 == 0 && threeAndFive % 3 == 0) ? 'YES' : 'NO')
+</script>
+<script id="ch0104/09">
+    let tFs = Number(prompt());
+    console.log(
+        ((tFs % 3 == 0) ? '3' : false) || ((tFs % 5 == 0) ? '5' : false) || ((tFs % 7 == 0) ? '7' : false) == true ?
+        (
+            String((tFs % 3 == 0) ? '3' : '').concat(String((tFs % 5 == 0) ? '5' : ''), String((tFs % 7 == 0) ?
+                '7' : ''))
+        ) : tFs
+    );
+</script>
+<script id="ch0104/10">
+    var classOne = Number(prompt());
+    var classTwo = Number(prompt());
+    console.log(classOne < 60 && classTwo < 60 ? '0' : (classOne >= 60 && classTwo >= 60 ? '0' : 1))
+</script>
+<script id="ch0104/11">
+    var date = Number(prompt());
+    console.log(date == 1 ? 'NO' : (date == 3 ? 'NO' : (date == 5 ? 'NO' : 'YES')));
+</script>
+<script id="ch0104/12">
+    var roadLength = Number(prompt());
+    var timeBike = roadLength / 3 + 27;
+    var timeWalk = roadLength / 1.5;
+    console.log(timeBike >= timeWalk ? (timeBike == timeWalk ? 'ALL' : 'Walk') : 'Bike');
+</script>
+<script id="ch0104/13">
+    var subX = Number(prompt());
+    console.log(
+        subX >= 0 && subX <= 5 ? (2.5 - subX).toFixed(3) :
+        subX >= 5 && subX <= 10 ? (2 - 1.5 * (subX - 3) ** 2).toFixed(3) :
+        subX >= 10 && subX <= 20 ? (subX / 2 - 1.5).toFixed(3) :
+        'Out Of Range'
+    );
+</script>
+<script id="ch0104/14">
+    var weight = Number(prompt());
+    var urge = prompt();
+    console.log(
+        urge != 'y' ? (
+            weight <= 1000 ? 8 :
+            Math.ceil((weight - 1000) / 500) * 4 + 8
+        ) :
+        (
+            weight <= 1000 ? 13 :
+            Math.ceil((weight - 1000) / 500) * 4 + 13
+        )
+    );
+</script>
+<script id="ch0104/15">
+    var maxA = Number(prompt());
+    var maxB = Number(prompt());
+    var maxC = Number(prompt());
+    console.log(
+        maxA > maxB ? (
+            maxA > maxC ? (
+                maxA
+            ) : (
+                maxC
+            )
+        ) : (
+            maxC > maxB ? (
+                maxC
+            ) : (
+                maxB
+            )
+        )
+    );
+</script>
+<script id="ch0104/16">
+    var triAbleA = Number(prompt());
+    var triAbleB = Number(prompt());
+    var triAbleC = Number(prompt());
+    console.log(
+        (triAbleA < triAbleB + triAbleC) &&
+        (triAbleB < triAbleA + triAbleC) &&
+        (triAbleC < triAbleA + triAbleB) ? 'yes' : 'no'
+    );
+</script>
+<script id="ch0104/17">
+    var isLunaYear = Number(prompt());
+    console.log(
+        isLunaYear % 4 == 0 ? (
+            isLunaYear % 100 == 0 && isLunaYear % 400 != 0 ? 'N' : (
+                isLunaYear % 3200 == 0 ? 'N' : 'Y'
+            )
+        ) : 'N'
+    );
+</script>
+<script id="ch0104/18">
+    var isInSqrX = Number(prompt());
+    var isInSqrY = Number(prompt());
+    console.log(
+        isInSqrX >= -1 && isInSqrX <= 1 && isInSqrY >= -1 && isInSqrY <= 1 ? 'yes' : 'no'
+    );
+</script>
+<script id="ch0104/19">
+    var calcA = Number(prompt());
+    var calcB = Number(prompt());
+    var calcOperator = prompt();
+    console.log(
+        calcOperator == '+' ? (calcA + calcB) :
+        calcOperator == "-" ? (calcA - calcB) :
+        calcOperator == "*" ? (calcA * calcB) :
+        calcOperator == "/" ? (calcA / calcB) :
+        'Invalid operator!'
+    );
+</script>
+<script id="ch0104/20">
+    var quadraA = Number(prompt());
+    var quadraB = Number(prompt());
+    var quadraC = Number(prompt());
+    var quadraCoeL = quadraB ** 2 - 4 * quadraA * quadraC;
+    console.log(
+        quadraCoeL == 0 ? (
+            `x1=x2=${-quadraB / (2 * quadraA)}`
+        ) :
+        quadraCoeL > 0 ? (
+            `x1=${((-quadraB + Math.sqrt(quadraCoeL)) / (2 * quadraA)).toFixed(5)};x2=${((-quadraB - Math.sqrt(quadraCoeL)) / (2 * quadraA)).toFixed(5)}`
+        ) :
+        (
+            `x1=${(-quadraB / (2 * quadraA)).toFixed(5)}+${(Math.sqrt(-quadraCoeL) / (2 * quadraA)).toFixed(5)}i;x2=${(-quadraB / (2 * quadraA)).toFixed(5)}-${(Math.sqrt(-quadraCoeL) / (2 * quadraA)).toFixed(5)}i`
+        )
+    );
+</script>
+<script id="ch0104/21">
+    var apple2N = Number(prompt());
+    var apple2X = Number(prompt());
+    var apple2Y = Number(prompt());
+    console.log(
+        apple2N - Math.ceil(apple2Y / apple2X)
+    );
+</script>
