@@ -1,0 +1,116 @@
+<script id="ch0103/01">
+    console.log(`A + B = ${Number(prompt()) + Number(prompt())}`)
+</script>
+
+<script id="ch0103/02">
+    console.log(`(A + B) * C = ${(Number(prompt()) + Number(prompt())) * Number(prompt())}`)
+</script>
+<script id="ch0103/03">
+    console.log(`(A + B) / C = ${(Number(prompt()) + Number(prompt())) / Number(prompt())}`)
+</script>
+<script id="ch0103/04">
+    var a = Number(prompt());
+    var b = Number(prompt());
+
+    console.log(`A / B = ${Math.floor(a / b)} .. ${a % b}`)
+</script>
+<script id="ch0103/05">
+    console.log(`A / B = ${(Number(prompt()) / Number(prompt())).toFixed(2)}`)
+</script>
+<script id="ch0103/06">
+    var h1n1Count = Number(prompt());
+    var h1n1Death = Number(prompt());
+
+    console.log(`甲流死亡率为 ${(h1n1Death / h1n1Count).toFixed(5) * 100}%`)
+</script>
+<script id="ch0103/07">
+    var cubicA = Number(prompt());
+    var cubicB = Number(prompt());
+    var cubicC = Number(prompt());
+    var cubicD = Number(prompt());
+    var cubicX = Number(prompt());
+
+    console.log(
+        `a * x^3 + b * x^2 + c * x + d = ${((cubicA * Math.pow(cubicX, 3)) + (cubicB * Math.pow(cubicX, 2)) + (cubicC * cubicX) + cubicX).toFixed(7)}`
+    )
+</script>
+<script id="ch0103/08">
+    console.log(`C = ${(5 * (Number(prompt()) - 32) / 9).toFixed(5)}`)
+</script>
+<script id="ch0103/09">
+    var r = Number(prompt());
+
+    console.log(`
+    d = ${2 * r},
+    C = ${(2 * Math.PI * r).toFixed(4)},
+    area = ${(Math.PI * Math.pow(r, 2)).toFixed(4)}
+    `)
+</script>
+<script id="ch0103/10">
+    var r1 = Number(prompt());
+    var r2 = Number(prompt());
+
+    console.log(`R = ${(1 / (1 / r1 + 1 / r2)).toFixed(2)}`)
+</script>
+<script id="ch0103/11">
+    var floatA = Number(prompt());
+    var floatB = Number(prompt());
+
+    console.log(`a / b .. ${floatA - floatB * Math.floor(floatA / floatB)}`)
+</script>
+<script id="ch0103/12">
+    console.log(`volume is ${(4 / 3 * 3.14 * Math.pow(Number(prompt()), 3)).toFixed(2)}`)
+</script>
+<script id="ch0103/13">
+    function reverse(s) {
+        return s.split("").reverse().join("");
+    }
+
+    console.log(reverse(String(prompt())))
+</script>
+<script id="ch0103/14">
+    var eleH = Number(prompt());
+    var eleR = Number(prompt());
+
+    console.log(`Elephant drink ${Math.ceil(20 / ((3.14159 * Math.pow(eleR, 2) * eleH) / 1000))} tons of water.`)
+</script>
+<script id="ch0103/15">
+    var bugN = Number(prompt());
+    var bugX = Number(prompt());
+    var bugY = Number(prompt());
+
+    console.log(`${bugN - Math.ceil(bugY / bugX)} apples left.`)
+</script>
+<script id="ch0103/16">
+    var segX1 = Number(prompt());
+    var segY1 = Number(prompt());
+    var segX2 = Number(prompt());
+    var segY2 = Number(prompt());
+
+    console.log(`Length is ${Math.sqrt(Math.pow((segX2 - segX1), 2) + Math.pow((segY2 - segY1), 2)).toFixed(3)}`)
+</script>
+<script id="ch0103/17">
+    var triX1 = Number(prompt());
+    var triY1 = Number(prompt());
+    var triX2 = Number(prompt());
+    var triY2 = Number(prompt());
+    var triX3 = Number(prompt());
+    var triY3 = Number(prompt());
+
+    console.log(
+        `Area is ${((triX1 * triY2 + triX2 * triY3 + triX3 * triY1 - triX1 * triY3 - triX2 * triY1 - triX3 * triY1) / 2).toFixed(2)}`
+    )
+</script>
+<script id="ch0103/18">
+    var arithA1 = Number(prompt());
+    var arithA2 = Number(prompt());
+    var arithN = Number(prompt());
+
+    console.log(`an is ${(arithA2 - arithA1) * (arithN - 1) + arithA1}`)
+</script>
+<script id="ch0103/19">
+    console.log(`A * B = ${Number(prompt()) * Number(prompt())}`)
+</script>
+<script id="ch0103/20">
+    console.log(Math.pow(2, Number(prompt())))
+</script>
