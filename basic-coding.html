@@ -1,27 +1,27 @@
 <script id="ch0103/01">
-    console.log(`A + B = ${Number(prompt()) + Number(prompt())}`)
+    console.log(`${Number(prompt()) + Number(prompt())}`)
 </script>
 
 <script id="ch0103/02">
-    console.log(`(A + B) * C = ${(Number(prompt()) + Number(prompt())) * Number(prompt())}`)
+    console.log(`${(Number(prompt()) + Number(prompt())) * Number(prompt())}`)
 </script>
 <script id="ch0103/03">
-    console.log(`(A + B) / C = ${(Number(prompt()) + Number(prompt())) / Number(prompt())}`)
+    console.log(`${(Number(prompt()) + Number(prompt())) / Number(prompt())}`)
 </script>
 <script id="ch0103/04">
     var a = Number(prompt());
     var b = Number(prompt());
 
-    console.log(`A / B = ${Math.floor(a / b)} .. ${a % b}`)
+    console.log(`${Math.floor(a / b)} .. ${a % b}`)
 </script>
 <script id="ch0103/05">
-    console.log(`A / B = ${(Number(prompt()) / Number(prompt())).toFixed(2)}`)
+    console.log(`${(Number(prompt()) / Number(prompt())).toFixed(2)}`)
 </script>
 <script id="ch0103/06">
     var h1n1Count = Number(prompt());
     var h1n1Death = Number(prompt());
 
-    console.log(`甲流死亡率为 ${(h1n1Death / h1n1Count).toFixed(5) * 100}%`)
+    console.log(`${(h1n1Death / h1n1Count).toFixed(5) * 100}%`)
 </script>
 <script id="ch0103/07">
     var cubicA = Number(prompt());
@@ -31,35 +31,35 @@
     var cubicX = Number(prompt());
 
     console.log(
-        `a * x^3 + b * x^2 + c * x + d = ${((cubicA * Math.pow(cubicX, 3)) + (cubicB * Math.pow(cubicX, 2)) + (cubicC * cubicX) + cubicX).toFixed(7)}`
+        `${((cubicA * Math.pow(cubicX, 3)) + (cubicB * Math.pow(cubicX, 2)) + (cubicC * cubicX) + cubicX).toFixed(7)}`
     )
 </script>
 <script id="ch0103/08">
-    console.log(`C = ${(5 * (Number(prompt()) - 32) / 9).toFixed(5)}`)
+    console.log(`${(5 * (Number(prompt()) - 32) / 9).toFixed(5)}`)
 </script>
 <script id="ch0103/09">
     var r = Number(prompt());
 
     console.log(`
-    d = ${2 * r},
-    C = ${(2 * Math.PI * r).toFixed(4)},
-    area = ${(Math.PI * Math.pow(r, 2)).toFixed(4)}
+    ${2 * r},
+    ${(2 * Math.PI * r).toFixed(4)},
+    ${(Math.PI * Math.pow(r, 2)).toFixed(4)}
     `)
 </script>
 <script id="ch0103/10">
     var r1 = Number(prompt());
     var r2 = Number(prompt());
 
-    console.log(`R = ${(1 / (1 / r1 + 1 / r2)).toFixed(2)}`)
+    console.log(`${(1 / (1 / r1 + 1 / r2)).toFixed(2)}`)
 </script>
 <script id="ch0103/11">
     var floatA = Number(prompt());
     var floatB = Number(prompt());
 
-    console.log(`a / b .. ${floatA - floatB * Math.floor(floatA / floatB)}`)
+    console.log(` ${floatA - floatB * Math.floor(floatA / floatB)}`)
 </script>
 <script id="ch0103/12">
-    console.log(`volume is ${(4 / 3 * 3.14 * Math.pow(Number(prompt()), 3)).toFixed(2)}`)
+    console.log(`${(4 / 3 * 3.14 * Math.pow(Number(prompt()), 3)).toFixed(2)}`)
 </script>
 <script id="ch0103/13">
     function reverse(s) {
@@ -72,14 +72,14 @@
     var eleH = Number(prompt());
     var eleR = Number(prompt());
 
-    console.log(`Elephant drink ${Math.ceil(20 / ((3.14159 * Math.pow(eleR, 2) * eleH) / 1000))} tons of water.`)
+    console.log(`${Math.ceil(20 / ((3.14159 * Math.pow(eleR, 2) * eleH) / 1000))}`)
 </script>
 <script id="ch0103/15">
     var bugN = Number(prompt());
     var bugX = Number(prompt());
     var bugY = Number(prompt());
 
-    console.log(`${bugN - Math.ceil(bugY / bugX)} apples left.`)
+    console.log(`${bugN - Math.ceil(bugY / bugX)}`)
 </script>
 <script id="ch0103/16">
     var segX1 = Number(prompt());
@@ -87,7 +87,7 @@
     var segX2 = Number(prompt());
     var segY2 = Number(prompt());
 
-    console.log(`Length is ${Math.sqrt(Math.pow((segX2 - segX1), 2) + Math.pow((segY2 - segY1), 2)).toFixed(3)}`)
+    console.log(`${Math.sqrt(Math.pow((segX2 - segX1), 2) + Math.pow((segY2 - segY1), 2)).toFixed(3)}`)
 </script>
 <script id="ch0103/17">
     var triX1 = Number(prompt());
@@ -98,7 +98,7 @@
     var triY3 = Number(prompt());
 
     console.log(
-        `Area is ${((triX1 * triY2 + triX2 * triY3 + triX3 * triY1 - triX1 * triY3 - triX2 * triY1 - triX3 * triY1) / 2).toFixed(2)}`
+        `${((triX1 * triY2 + triX2 * triY3 + triX3 * triY1 - triX1 * triY3 - triX2 * triY1 - triX3 * triY1) / 2).toFixed(2)}`
     )
 </script>
 <script id="ch0103/18">
@@ -106,10 +106,10 @@
     var arithA2 = Number(prompt());
     var arithN = Number(prompt());
 
-    console.log(`an is ${(arithA2 - arithA1) * (arithN - 1) + arithA1}`)
+    console.log(`${(arithA2 - arithA1) * (arithN - 1) + arithA1}`)
 </script>
 <script id="ch0103/19">
-    console.log(`A * B = ${Number(prompt()) * Number(prompt())}`)
+    console.log(`${Number(prompt()) * Number(prompt())}`)
 </script>
 <script id="ch0103/20">
     console.log(Math.pow(2, Number(prompt())))
@@ -134,7 +134,14 @@
 <script id="ch0104/05">
     var comX = Number(prompt());
     var comY = Number(prompt());
-    console.log(comX >= comY ? (comX = comY ? '=' : '>') : '<')
+    console.log(
+        comX >= comY ?
+        (
+            comX == comY ? '=' :
+            '>'
+        ) :
+        '<'
+    )
 </script>
 <script id="ch0104/06">
     console.log(Number(prompt()) / 10 >= 1 ? '1' : 0)
@@ -149,13 +156,25 @@
     console.log((threeAndFive % 3 == 0 && threeAndFive % 3 == 0) ? 'YES' : 'NO')
 </script>
 <script id="ch0104/09">
-    let tFs = Number(prompt());
+    var tFs = Number(prompt());
     console.log(
-        ((tFs % 3 == 0) ? '3' : false) || ((tFs % 5 == 0) ? '5' : false) || ((tFs % 7 == 0) ? '7' : false) == true ?
+        tFs % 3 == 0 && tFs % 5 == 0 && tFs % 7 == 0 ?
         (
-            String((tFs % 3 == 0) ? '3' : '').concat(String((tFs % 5 == 0) ? '5' : ''), String((tFs % 7 == 0) ?
-                '7' : ''))
-        ) : tFs
+            '3 5 7'
+        ) : (tFs % 3 == 0 && tFs % 5 == 0 ? '3 5' :
+            (
+                tFs % 3 == 0 && tFs % 7 == 0 ? '3 7' :
+                (
+                    tFs % 5 == 0 && tFs % 7 == 0 ? '5 7' : (
+                        tFs % 3 == 0 ? '3' : (
+                            tFs % 5 == 0 ? '5' : (
+                                tFs % 7 == 0 ? '7' : tFs
+                            )
+                        )
+                    )
+                )
+            )
+        )
     );
 </script>
 <script id="ch0104/10">
