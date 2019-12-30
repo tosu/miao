@@ -613,13 +613,11 @@ ${(ballResult[9] / 2).toFixed(7)}`);
     }
 </script>
 <script id="ch0105/22">
-    var jjCost = [];
+    var jjCost = prompt(`Input month cost.`).split(" ");
     var jjLeft = 0;
     var jjSave = 0;
 
     for (i = 0; i <= 11; i++) {
-        jjCost[i] = Number(prompt(`${i + 1} month cost.`));
-
         if (jjLeft >= 0) {
             jjLeft = 300 + jjLeft;
         }
