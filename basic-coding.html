@@ -593,8 +593,8 @@ ${countTen}`)
         }
     }
 
-    console.log(`${ballSum}
-${ballResult[9]}`);
+    console.log(`${ballSum.toFixed(4)}
+${(ballResult[9] / 2).toFixed(7)}`);
 </script>
 <script id="ch0105/21">
     var angleValley = Number(prompt(`Number of Angle Valley Guess.`));
@@ -620,7 +620,7 @@ ${ballResult[9]}`);
     for (i = 0; i <= 11; i++) {
         jjCost[i] = Number(prompt(`${i + 1} month cost.`));
 
-        if (jjLeft > 0) {
+        if (jjLeft >= 0) {
             jjLeft = 300 + jjLeft;
         }
 
@@ -637,6 +637,7 @@ ${ballResult[9]}`);
             }
         }
     }
+
     if (jjLeft > 0) console.log(jjLeft + jjSave * 1.2);
 </script>
 <script id="ch0105/23"></script>
