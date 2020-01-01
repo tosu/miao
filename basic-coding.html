@@ -640,7 +640,18 @@
 <script id="ch0105/25"></script>
 <script id="ch0105/26"></script>
 <script id="ch0105/27"></script>
-<script id="ch0105/28"></script>
+<script id="ch0105/28">
+    var splitNum = Number(prompt(`The number of split!`));
+    var splitOutput = "";
+
+    while (splitNum >= 10) {
+        splitOutput += splitNum % 10 + " ";
+        splitNum = Math.floor(splitNum / 10)
+    }
+    splitOutput += splitNum;
+
+    console.log(splitOutput)
+</script>
 <script id="ch0105/29">
     function reverse(s) {
         return s.split("").reverse().join("");
@@ -698,9 +709,6 @@
         if (!light[a]) lightOutput += a + 1 + ",";
         lightCount++;
     }
-
-
-
 
     console.log(String(lightOutput.split(",").slice(0, lightOutput.length - 3)))
 </script>
