@@ -641,15 +641,340 @@
 <script id="ch0105/26"></script>
 <script id="ch0105/27"></script>
 <script id="ch0105/28"></script>
-<script id="ch0105/29"></script>
-<script id="ch0105/30"></script>
-<script id="ch0105/31"></script>
-<script id="ch0105/32"></script>
-<script id="ch0105/33"></script>
-<script id="ch0105/34"></script>
-<script id="ch0105/35"></script>
-<script id="ch0105/36"></script>
-<script id="ch0105/37"></script>
-<script id="ch0105/38"></script>
-<script id="ch0105/39"></script>
-<script id="ch0105/40"></script>
+<script id="ch0105/29">
+    function reverse(s) {
+        return s.split("").reverse().join("");
+    }
+
+    var reverseNum = Number(prompt(`The number to reverse!`))
+    if (reverseNum > 0) {
+        reverseNum = String(reverseNum)
+        console.log(reverse(reverseNum))
+    } else if (reverseNum < 0) {
+        reverseNum *= -1;
+        reverseNum = String(reverseNum)
+        console.log(`-${reverse(reverseNum)}`)
+    }
+</script>
+<script id="ch0105/30">
+    var threeKInput = Number(prompt(`The number of THREE-K!`));
+    var threeK = Number(prompt(`The number of K!`));
+    var threeKCount = 0;
+    var threeKInputSave = threeKInput;
+
+    while (threeKInput >= 10) {
+        if (threeKInput % 10 == threeK) threeKCount++;
+        threeKInput = Math.floor(threeKInput / 10)
+    }
+    if (threeKInput == threeK) threeKCount++;
+
+    if (!(threeKInputSave % 19) && threeKCount == 3) {
+        console.log(`YES`);
+    } else {
+        console.log(`NO`)
+    }
+</script>
+<script id="ch0105/31">
+    var lightM = Number(prompt(`How much people!`));
+    var lightN = Number(prompt(`How much lights!`));
+    var lightOutput = "";
+    var light = [];
+    var lightCount = 0;
+
+    for (let i = 0; i < lightN; i++) {
+        light[i] = true;
+    }
+
+    for (let m = 1; m <= lightM; m++) {
+        let n = 1;
+
+        while (n * m < lightM) {
+            light[n * m - 1] = !light[n * m - 1];
+            n++;
+        }
+    }
+
+    for (let a = 0; a < lightN; a++) {
+        if (!light[a]) lightOutput += a + 1 + ",";
+        lightCount++;
+    }
+
+
+
+
+    console.log(String(lightOutput.split(",").slice(0, lightOutput.length - 3)))
+</script>
+<script id="ch0105/32">
+    var pqInput = Number(prompt(`The number of calculation like P&Q!`));
+    var pqOutput = 0;
+    var pList = [];
+    var qList = [];
+
+    for (let i = 1; i <= pqInput; i++) {
+        if (i == 1) {
+            qList[i] = 2;
+            pList[i] = 1;
+            pqOutput += qList[i] / pList[i];
+
+        } else {
+            qList[i] = qList[i - 1] + pList[i - 1];
+            pList[i] = qList[i - 1];
+            pqOutput += qList[i] / pList[i];
+        }
+    }
+
+    console.log(pqOutput.toFixed(4))
+</script>
+<script id="ch0105/33">
+    var aInput = Number(prompt(`The number of calculation like this!`));
+    var aOutput = 0;
+
+    for (let i = 1; i <= aInput; i++) {
+        if (i % 2 == 1) {
+            aOutput += 1 / i;
+        } else {
+            aOutput -= 1 / i;
+        }
+    }
+
+    console.log(aOutput.toFixed(4))
+</script>
+<script id="ch0105/34">
+    var fInput = Number(prompt(`The number of sum of factorial calculation.`));
+    var fOutput = 0;
+
+    function factorial(num) {
+        var calc = 1;
+
+        while (num > 1) {
+            calc *= num;
+            num--;
+        }
+        return calc
+    }
+
+    for (let i = 1; i <= fInput; i++) {
+        fOutput += factorial(i);
+    }
+
+    console.log(fOutput)
+</script>
+<script id="ch0105/35">
+    var eInput = Number(prompt(`The number of e calculation.`));
+    var eOutput = 1;
+
+    function factorial(num) {
+        var calc = 1;
+
+        while (num > 1) {
+            calc *= num;
+            num--;
+        }
+        return calc
+    }
+
+    for (let i = 1; i <= eInput; i++) {
+        eOutput += (1 / factorial(i));
+    }
+
+    console.log(eOutput.toFixed(10))
+</script>
+<script id="ch0105/36">
+    var quanticCalc = Number(prompt(`The number will be calculated`));
+    var quanticPower = Number(prompt(`The highest power of quantic.`));
+    var quaticOutcome = 0;
+
+    for (let i = 0; i <= quanticPower; i++) {
+        quaticOutcome += quanticCalc ** i;
+    }
+
+    console.log(quaticOutcome.toFixed(2))
+</script>
+<script id="ch0105/37">
+    var soldier = {
+        maxPower: Number(prompt(`Max power!`)),
+        power: 0,
+        attack: Number(prompt(`Initial attack!`)),
+        element: Number(prompt(`How much elements soldier has?`))
+    };
+    while (soldier.element > 0) {
+        while (soldier.power < soldier.attack && soldier.element > 0) {
+            soldier.element--
+            soldier.power++
+        }
+        while (soldier.power <= soldier.maxPower && soldier.power > 0) {
+            soldier.power -= soldier.attack
+            soldier.attack++;
+        }
+    }
+
+    console.log(soldier.attack)
+</script>
+<script id="ch0105/38">
+    var highPower = Number(prompt(`Highest power factor.`));
+    var powerNum = [];
+    var diffNum = "";
+
+    if (highPower != 0) {
+        for (let i = 0; i <= highPower; i++) {
+            powerNum[highPower - i] = Number(prompt(`${highPower - i} factor`));
+        }
+
+        for (let i = highPower; i >= 0; i--) {
+            if (i != 0) {
+                diffNum += i * powerNum[i] + " ";
+            }
+        }
+    } else {
+        for (let i = 0; i <= highPower; i++) {
+            powerNum[highPower - i] = Number(prompt(`${highPower - i} factor`));
+        }
+
+        diffNum += 0;
+    }
+    console.log(diffNum);
+</script>
+<script id="ch0105/39">
+    var numEnd = Number(prompt(`Right`));
+    var sevenCount = 0;
+    var sevenCountSum = 0;
+
+    for (var i = 1; i <= numEnd; i++) {
+        sevenCountSum += i ** 2
+        var numberNew = i;
+
+        if (numberNew % 7 == 0) {
+            sevenCount += i ** 2;
+        }
+
+        while (numberNew > 10) {
+            if (numberNew % 10 == 7) {
+                sevenCount += i ** 2;
+            }
+            numberNew = Math.floor(numberNew / 10);
+        }
+    }
+
+    console.log(sevenCountSum - sevenCount);
+</script>
+<script id="ch0105/40">
+    var numEnd = Number(prompt(`Right`));
+    var oneCount = 0;
+
+    for (var i = 1; i <= numEnd; i++) {
+        var numberNew = i;
+
+        while (numberNew > 10) {
+            if (numberNew % 10 == 1) oneCount++;
+            numberNew = Math.floor(numberNew / 10);
+        }
+
+        if (numberNew == 1) oneCount++;
+        if (numberNew == 10) oneCount++;
+    }
+
+    console.log(oneCount)
+</script>
+<script id="ch0105/41">
+    var numStart = Number(prompt(`Left`));
+    var numEnd = Number(prompt(`Right`));
+    var twoCount = 0;
+
+    for (var i = numStart; i <= numEnd; i++) {
+        var numberNew = i;
+
+        while (numberNew > 10) {
+            if (numberNew % 10 == 2) twoCount++;
+            numberNew = Math.floor(numberNew / 10);
+        }
+
+        if (numberNew == 2) twoCount++;
+    }
+
+    console.log(twoCount)
+</script>
+<script id="ch0105/42">
+    var triPaint = "";
+    var rowInput = Number(prompt(`The row!`));
+    var columnInput = Number(prompt(`The column!`));
+    var triImgInput = String(prompt(`The Img!`));
+    var isEmptyInput = Number(prompt(`Is it empty?`));
+
+    if (isEmptyInput == 0) {
+        for (let rowIndex = 0; rowIndex < rowInput; rowIndex++) {
+            for (let columnIndex = 0; columnIndex < columnInput; columnIndex++) {
+                if (rowIndex == 0 || rowIndex == rowInput - 1) {
+                    triPaint += triImgInput;
+                } else {
+                    if (columnIndex == 0 || columnIndex == columnInput - 1) {
+                        triPaint += triImgInput;
+                    } else {
+                        triPaint += " ";
+                    }
+                }
+            }
+            triPaint += "\n";
+        }
+    } else if (isEmptyInput == 1) {
+        for (let rowIndex = 0; rowIndex < rowInput; rowIndex++) {
+            for (let columnIndex = 0; columnIndex < columnInput; columnIndex++) {
+                triPaint += triImgInput;
+            }
+            triPaint += "\n";
+        }
+    }
+
+    console.log(triPaint)
+</script>
+<script id="ch0105/43">
+    var resolveNum = Number(prompt(`The number you wanna resolev.`));
+
+    function maxPrimeFactor(num) {
+        for (var i = 2; i <= num; i++) {
+            while (num % i == 0) {
+                num = num / i;
+            }
+        }
+        return (i - 1)
+    }
+
+    console.log(maxPrimeFactor(resolveNum));
+</script>
+<script id="ch0105/44">
+    var primeSmall = Number(prompt(`The nth little prime number!`));
+    var primeCount = 0;
+
+    for (let i = 0; i < 10000; i++) {
+        if ((i > 1) && ((i == 2) || (i == 3) || (i == 5) || (i == 11) || ((i % 2 != 0) && (i % 3 != 0) && (i % 5 !=
+                0) && (i % 11 != 0)))) {
+            primeCount++;
+
+            if (primeCount == primeSmall) {
+                console.log(i);
+                break;
+            }
+        }
+    }
+</script>
+<script id="ch0105/45">
+    var coinDay = Number(prompt(`The day knight receive golden coin.`));
+    var coinCount = 1;
+    var coinSum = 0;
+    var coinDayCount = 0;
+
+
+    for (let i = 1; i <= coinDay; i++) {
+        for (let k = 0; k < coinCount; k++) {
+            coinDayCount++;
+
+            if (coinDay >= coinDayCount) {
+                coinSum += i;
+            }
+        }
+
+        coinCount += i;
+
+    }
+
+    console.log(`${coinSum}`);
+</script>
