@@ -637,9 +637,49 @@
 </script>
 <script id="ch0105/23"></script>
 <script id="ch0105/24"></script>
-<script id="ch0105/25"></script>
-<script id="ch0105/26"></script>
-<script id="ch0105/27"></script>
+<script id="ch0105/25">
+    function reverse(s) {
+        return s.split("").reverse().join("");
+    }
+
+    for (var awsomeNum = 1;; awsomeNum++) {
+        var awsomeSeven = String(awsomeNum.toString(7));
+        var awsomeNine = String(awsomeNum.toString(9));
+        if (awsomeSeven.length == awsomeNine && reverse(awsomeNine) == awsomeSeven) {
+            console.log(`${awsomeNum} ${awsomeSeven} ${awsomeNine}`)
+            break;
+        }
+    }
+</script>
+<script id="ch0105/26">
+    var strangeNum = Number(prompt(`The number of Strange!`));
+    var strangeList = [];
+    var strangeCount = 0;
+
+    for (let i = 0; i < strangeNum; i++) {
+        strangeList[i] = Number(prompt(`The ${i + 1} Strange!`));
+        if (((strangeList[i] % 10) -
+                Math.floor(strangeList[i] / 1000) -
+                (Math.floor(strangeList[i] / 100) % 10) -
+                (Math.floor(strangeList[i] / 10) % 10)) > 0) {
+            strangeCount++
+        }
+    }
+
+    console.log(strangeCount)
+</script>
+<script id="ch0105/27">
+    var skNum = Number(prompt(`The number of SK!`));
+    var skSum = 0;
+    var skIndex = 1;
+
+    while (skSum <= skNum) {
+        skSum += 1 / skIndex;
+        skIndex++;
+    }
+
+    console.log(skIndex - 1)
+</script>
 <script id="ch0105/28">
     var splitNum = Number(prompt(`The number of split!`));
     var splitOutput = "";
