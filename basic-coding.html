@@ -1,7 +1,11 @@
+<script id="7">
+    function isSeven(num) {
+        if (num)
+    }
+</script>
 <script id="ch0103/01">
     console.log(`${Number(prompt()) + Number(prompt())}`)
 </script>
-
 <script id="ch0103/02">
     console.log(`${(Number(prompt()) + Number(prompt())) * Number(prompt())}`)
 </script>
@@ -642,12 +646,24 @@
         return s.split("").reverse().join("");
     }
 
-    for (var awsomeNum = 1;; awsomeNum++) {
-        var awsomeSeven = String(awsomeNum.toString(7));
-        var awsomeNine = String(awsomeNum.toString(9));
-        if (awsomeSeven.length == awsomeNine && reverse(awsomeNine) == awsomeSeven) {
-            console.log(`${awsomeNum} ${awsomeSeven} ${awsomeNine}`)
-            break;
+    var b = 1;
+    var a = 0;
+    var list = [];
+
+    while (String(b.toString(7)).length <= 3 && String(b.toString(9)).length <= 3) {
+        if (reverse(String(b.toString(7))) == String(b.toString(9))) {
+            list[a] = b;
+            a++;
+        }
+        b++;
+    }
+
+    for (let i = 0; i <= 8; i++) {
+        if (
+            String(list[i].toString(7)).length == 3 &&
+            String(list[i].toString(9)).length == 3
+        ) {
+            console.log(list[i])
         }
     }
 </script>
