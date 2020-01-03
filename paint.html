@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas width="400" height="400"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+  // 画一条实线
+  for (let i = 1; i < 400; i++) {
+    dot(i, 5, color = '#ff1744')
+  }
+  // 画一条一个实点一个空点的虚线
+  for (let i = 1; i < 400; i++) {
+    if (i % 2 == 1) {
+      dot(i, 10, color = '#f50057')
+    }
+  }
+  // 画一条两个实点两个空点的虚线
+  for (let i = 0; i < 400; i++) {
+    dot(4 * i, 15, color = '#d500f9')
+    dot(4 * i + 1, 15, color = '#d500f9')
+  }
+  // 画一条三个实点两个空点的虚线
+  for (let i = 0; i < 400; i++) {
+    dot(5 * i, 20, color = '#4527a0')
+    dot(5 * i + 1, 20, color = '#4527a0')
+  }
+  // 画一条45度的斜线
+  for (let x = 0; x < 400; x++) {
+    dot(x, x, color = '#283593')
+  }
+  // 画一条跨越画布左上角和右下角的对角线
+  for (let x = 0; x < 400; x++) {
+    dot(x, 3 / 4 * x, color = '#00838f')
+  }
+  // 画一个空心矩形
+  for (let x = 210; x < 400; x++) {
+    for (let y = 25; y < 50; y++) {
+      if (x == 210) {
+        dot(x, y, color = 'rgba(25, 118, 210,1)')
+      } else if (x == 399) {
+        dot(x, y, color = 'rgba(25, 118, 210,1)')
+      } else if (y == 25) {
+        dot(x, y, color = 'rgba(25, 118, 210,1)')
+      } else if (y == 49) {
+        dot(x, y, color = 'rgba(25, 118, 210,1)')
+      }
+    }
+  }
+  // 画一个实心矩形
+  for (let x = 0; x < 190; x++) {
+    for (let y = 25; y < 50; y++) {
+      dot(x, y, color = 'rgba(25, 118, 210,0.2)')
+    }
+  }
+  // 画一个rgb色彩空间的某一面
+  for (let x = 0; x < 100; x += 0.5) {
+    for (let y = 60; y < 160; y += 0.5) {
+      dot(x, y, color = `hsl(280, ${x}%, ${y - 60}%)`)
+    }
+  }
+  // 画一个空心的圆
+  for (let x = 0; x < 360; x += 0.5) {
+    dot(200 + Math.sin(x) * 50, 110 + Math.cos(x) * 50, color = `#f57c00`)
+  }
+  // 画一个实心的圆
+  for (let x = 0; x < 360; x += 0.5) {
+    for (let y = 0; y < 50; y += 0.5)
+      dot(350 + Math.sin(x) * y, 110 + Math.cos(x) * y, color = `#ffab40`)
+  }
+  // 画一个大小合适的sin(x) 的图像
+  for (let x = 0; x < 300; x += 0.005) {
+    dot(25 * x, 50 * Math.sin(x) + 250, color = `#4e342e`)
+  }
+</script>
+
+</html>
