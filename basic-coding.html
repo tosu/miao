@@ -1,7 +1,213 @@
 <script id="7">
     function isSeven(num) {
-        if (num)
+        if (num % 7 == 0 || num % 10 == 7) {
+            return 1
+        } else {
+            return 0
+        }
     }
+
+    console.log(isSeven(Number(prompt())) ? `YES` : `NO`)
+</script>
+<script id="sort">
+    function sort(x, y, z) {
+        let tmp = 0;
+        if (x < y) {
+            tmp = x;
+            x = y;
+            y = tmp;
+        }
+        if (x < z) {
+            tmp = x;
+            x = z;
+            z = tmp;
+        }
+        if (y < z) {
+            tmp = y;
+            y = z;
+            z = tmp;
+        }
+
+        console.log(`${x} ${y} ${z}`)
+    }
+
+    sort(Number(prompt()), Number(prompt()), Number(prompt()))
+</script>
+<script id="narcissistic">
+    function isNarcissistic(num) {
+        let list = [];
+        let i = 0;
+        let sum = 0;
+        let tmp = num;
+
+        while (num >= 10) {
+            list[i] = num % 10;
+            num = Math.floor(num / 10);
+            i++
+        }
+
+        list[i] = num;
+
+        for (let x = 0; x <= i; x++) {
+            sum += list[x] ** (i + 1);
+
+        }
+
+        if (sum == tmp) return 1
+        else return 0
+
+    }
+
+    console.log(isNarcissistic(Number(prompt())) ? `YES` : `NO`)
+</script>
+<script id="narcissistics">
+    function isNarcissistic(num) {
+        let list = [];
+        let i = 0;
+        let sum = 0;
+        let tmp = num;
+
+        while (num >= 10) {
+            list[i] = num % 10;
+            num = Math.floor(num / 10);
+            i++
+        }
+
+        list[i] = num;
+
+        for (let x = 0; x <= i; x++) {
+            sum += list[x] ** (i + 1);
+
+        }
+
+        if (sum == tmp) return 1
+        else return 0
+
+    }
+
+    var output = "";
+
+    for (let a = 0; a < 1000; a++) {
+        if (isNarcissistic(a)) {
+            output += a + " ";
+        }
+    }
+
+    console.log(output)
+</script>
+<script id="weekday">
+    function isLeap(year) {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 4 == 0) {
+            return 1
+        } else {
+            return 0
+        }
+    }
+
+    function weekday(year, month) {
+        let sum = 0
+        let listL = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        let listN = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        if (isLeap(year)) {
+            for (let i = 0; i < month - 1; i++) {
+                sum += listL[i]
+            }
+        } else {
+            for (let i = 0; i < month - 1; i++) {
+                sum += listN[i]
+            }
+        }
+
+        let weekday = (sum + 1) % 7;
+
+        return weekday
+    }
+
+    console.log(weekday(Number(prompt()), Number(prompt())))
+</script>
+<script id="palindrom">
+    function reverse(s) {
+        return s.split("").reverse().join("");
+    }
+
+    var s = String(prompt());
+
+    console.log(reverse(s) == s ? `YES` : `NO`)
+</script>
+<script id="complete-number">
+    function isPefect(num) {
+        let sum = 0;
+
+        for (let i = 1; i < num; i++) {
+
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+
+        if (sum == num) return 1
+        else return 0
+    }
+
+    console.log(isPefect(Number(prompt())) ? `YES` : `NO`)
+</script>
+<script id="complete-numbers">
+    function isPefect(num) {
+        let sum = 0;
+
+        for (let i = 1; i < num; i++) {
+
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+
+        if (sum == num) return 1
+        else return 0
+    }
+
+    var output = "";
+
+    for (let a = 1; a <= 1000; a++) {
+        if (isPefect(a)) {
+            output += a + " "
+        }
+    }
+
+    console.log(output)
+</script>
+<script id="prime">
+    function isPrime(i) {
+        if ((i > 1) && ((i == 2) || (i == 3) || (i == 5) || (i == 11) || ((i % 2 != 0) && (i % 3 != 0) && (i % 5 !=
+                0) && (i % 11 != 0)))) {
+            return 1
+        } else {
+            return 0
+        }
+    }
+
+    console.log(isPrime(Number(prompt())) ? `YES` : `NO`)
+</script>
+<script id="primes">
+    function isPrime(i) {
+        if ((i > 1) && ((i == 2) || (i == 3) || (i == 5) || (i == 11) || ((i % 2 != 0) && (i % 3 != 0) && (i % 5 !=
+                0) && (i % 11 != 0)))) {
+            return 1
+        } else {
+            return 0
+        }
+    }
+
+    var output = "";
+
+    for (let a = 1; a <= 100; a++) {
+        if (isPrime(a)) {
+            output += a + " "
+        }
+    }
+
+    console.log(output)
 </script>
 <script id="ch0103/01">
     console.log(`${Number(prompt()) + Number(prompt())}`)
