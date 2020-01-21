@@ -119,7 +119,7 @@
             }
         }
 
-        let weekday = (sum + 1) % 7;
+        let weekday = (sum + 3) % 7;
 
         return weekday
     }
@@ -208,6 +208,18 @@
     }
 
     console.log(output)
+</script>
+<script id="sqrpt">
+    var a = 0;
+    var b = 12;
+    var abs = a * a - 12
+    a = b / 2
+
+    while (abs > 0.01) {
+        a = a / 2
+    }
+
+    console.log(a)
 </script>
 <script id="ch0103/01">
     console.log(`${Number(prompt()) + Number(prompt())}`)
@@ -675,10 +687,22 @@
     console.log(sameCount);
 </script>
 <script id="ch0105/13">
+    function myPow(x, n) {
+        if (n == 0) return 1;
+
+        let halfPow = myPow(x, n / 2);
+
+        if (n % 2 == 0) return halfPow * halfPow;
+        if (n > 0) return halfPow * halfPow * x;
+
+        return halfPow * halfPow / x;
+    }
+
     var powerA = Number(prompt(`Input a`));
     var powerN = Number(prompt(`Input n`));
-    var powerResult = Math.pow(powerA, powerN);
-    console.log(powerResult)
+
+
+    console.log(myPow(powerA, powerN))
 </script>
 <script id="ch0105/14">
     var popuBase = Number(prompt(`Basic popu.`));
